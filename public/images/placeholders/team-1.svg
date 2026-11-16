@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Placeholder: Founder 1 photo">
+  <!-- TODO: replace this placeholder with a real photo -->
+  <rect width="600" height="600" fill="#EDE8DD"/>
+  <rect x="16" y="16" width="568" height="568" rx="24" fill="none" stroke="#CFC6B4" stroke-width="3" stroke-dasharray="14 12"/>
+  <g transform="translate(300 260)"><circle cx="0" cy="-70" r="80" fill="#CFC6B4"/><path d="M-150 150 c0 -100 70 -140 150 -140 s150 40 150 140 z" fill="#CFC6B4"/></g>
+  <text x="300.0" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#3B332A" font-weight="600">Founder 1 photo</text>
+  <text x="300.0" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6A6358" letter-spacing="2">PLACEHOLDER IMAGE · 600×600</text>
+</svg>

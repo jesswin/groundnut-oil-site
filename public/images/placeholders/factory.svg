@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Placeholder: Factory photo">
+  <!-- TODO: replace this placeholder with a real photo -->
+  <rect width="1200" height="800" fill="#EDE8DD"/>
+  <rect x="16" y="16" width="1168" height="768" rx="24" fill="none" stroke="#CFC6B4" stroke-width="3" stroke-dasharray="14 12"/>
+  <g transform="translate(600 330)" fill="none" stroke="#CFC6B4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-170" y="-110" width="340" height="220" rx="18"/><circle cx="-90" cy="-45" r="26"/><path d="M-170 70 l100 -90 l80 70 l60 -50 l100 90"/></g>
+  <text x="600.0" y="730" text-anchor="middle" font-family="Georgia, serif" font-size="37" fill="#3B332A" font-weight="600">Factory photo</text>
+  <text x="600.0" y="760" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#6A6358" letter-spacing="2">PLACEHOLDER IMAGE · 1200×800</text>
+</svg>

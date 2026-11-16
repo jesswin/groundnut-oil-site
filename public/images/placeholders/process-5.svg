@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750" role="img" aria-label="Placeholder: Process step 5: Packing">
+  <!-- TODO: replace this placeholder with a real photo -->
+  <rect width="1000" height="750" fill="#EDE8DD"/>
+  <rect x="16" y="16" width="968" height="718" rx="24" fill="none" stroke="#CFC6B4" stroke-width="3" stroke-dasharray="14 12"/>
+  <g transform="translate(500 300)" fill="none" stroke="#CFC6B4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-170" y="-110" width="340" height="220" rx="18"/><circle cx="-90" cy="-45" r="26"/><path d="M-170 70 l100 -90 l80 70 l60 -50 l100 90"/></g>
+  <text x="500.0" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="31" fill="#3B332A" font-weight="600">Process step 5: Packing</text>
+  <text x="500.0" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6A6358" letter-spacing="2">PLACEHOLDER IMAGE · 1000×750</text>
+</svg>
