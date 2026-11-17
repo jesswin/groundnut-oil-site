@@ -2,31 +2,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig, t, telUrl, whatsappUrl } from "@/lib/site-config";
 import { LanguageSwitcher } from "./language-switcher";
+import { Logo } from "./logo";
 import { MobileMenu } from "./mobile-menu";
 import { NavLinks, type NavItem } from "./nav-links";
-
-export function Logo({ brand }: { brand: string }) {
-  return (
-    <span className="flex items-center gap-2.5">
-      {/* TODO: replace with your logo */}
-      <svg viewBox="0 0 64 64" className="size-8 shrink-0" aria-hidden="true">
-        <path
-          d="M32 7c10 13 16 22 16 32a16 16 0 0 1-32 0c0-10 6-19 16-32z"
-          fill="none"
-          stroke="var(--gold)"
-          strokeWidth="2.5"
-        />
-        <path
-          d="M32 25c5 6.500 7.500 11 7.500 15a7.500 7.500 0 0 1-15 0c0-4 2.500-8.500 7.500-15z"
-          fill="var(--gold)"
-        />
-      </svg>
-      <span className="brand-word font-heading text-brown-dark text-[1.35rem] leading-tight font-medium">
-        {brand}
-      </span>
-    </span>
-  );
-}
 
 export function Header() {
   const locale = useLocale();
@@ -41,14 +19,13 @@ export function Header() {
     { href: "/quality", label: tn("quality") },
     { href: "/bulk-orders", label: tn("bulkOrders") },
     { href: "/distributor", label: tn("distributor") },
-    { href: "/blog", label: tn("blog") },
     { href: "/contact", label: tn("contact") },
   ];
   const mobile: NavItem[] = [
     { href: "/", label: tn("home") },
-    ...desktop.slice(0, 7),
+    ...desktop.slice(0, -1),
     { href: "/faq", label: tn("faq") },
-    desktop[7],
+    desktop[desktop.length - 1],
   ];
 
   return (
@@ -71,6 +48,7 @@ export function Header() {
             {tc("enquireBulk")}
           </Link>
           <MobileMenu
+            brand={brand}
             items={mobile}
             labels={{
               open: tn("openMenu"),

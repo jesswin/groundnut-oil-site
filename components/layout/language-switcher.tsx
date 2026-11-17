@@ -28,7 +28,7 @@ export function LanguageSwitcher({
 
   if (variant === "inline") {
     return (
-      <div role="group" aria-label={label} className="flex flex-wrap gap-2">
+      <div role="group" aria-label={label} className="flex flex-wrap items-center gap-x-5 gap-y-2">
         {locales.map((locale) => (
           <Link
             key={locale}
@@ -38,8 +38,8 @@ export function LanguageSwitcher({
             hrefLang={locale}
             aria-current={locale === current ? "true" : undefined}
             className={cn(
-              "border-line text-brown-dark inline-flex min-h-11 items-center rounded-sm border px-4 text-base font-medium",
-              locale === current && "border-brown bg-brown text-cream",
+              "text-stone hover:text-brown-dark border-b border-transparent py-1 text-base transition-colors",
+              locale === current && "text-brown-dark border-gold",
             )}
           >
             {localeNames[locale]}

@@ -10,7 +10,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import { formatAddress, products, siteConfig, t, telUrl, whatsappUrl } from "@/lib/site-config";
 import { Copyright } from "./copyright";
-import { Logo } from "./header";
+import { Logo } from "./logo";
 
 const socials = [
   { key: "instagram", name: "Instagram", Icon: InstagramIcon },
@@ -39,12 +39,13 @@ export function Footer() {
     { href: "/faq", label: tn("faq") },
     { href: "/contact", label: tn("contact") },
   ];
+  const contactLink = "text-cream/85 hover:text-gold underline-offset-4 hover:underline";
   const linkClass =
     "text-cream/85 hover:text-gold inline-block py-1 underline-offset-4 hover:underline";
 
   return (
     <footer className="bg-brown-dark text-cream texture-grain">
-      <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr]">
+      <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_1fr_1.45fr] lg:gap-12">
         <div>
           <div className="[&_span]:text-cream">
             <Logo brand={brand} />
@@ -93,9 +94,12 @@ export function Footer() {
 
         <div>
           <h2 className="caps text-gold font-sans">{tf("contact")}</h2>
-          <ul className="text-cream/85 mt-3 space-y-3">
-            <li className="flex gap-3">
-              <MapPin aria-hidden="true" className="text-gold mt-1 size-5 shrink-0" />
+          <ul className="text-cream/85 mt-4 space-y-3.5 text-[0.95rem] leading-6">
+            <li className="flex gap-3.5">
+              <MapPin
+                aria-hidden="true"
+                className="text-gold mt-[3px] size-[18px] shrink-0 stroke-[1.5]"
+              />
               <address className="not-italic">
                 {formatAddress(locale).map((line) => (
                   <span key={line} className="block">
@@ -104,31 +108,41 @@ export function Footer() {
                 ))}
               </address>
             </li>
-            <li className="flex gap-3">
-              <Phone aria-hidden="true" className="text-gold mt-1 size-5 shrink-0" />
-              <a href={telUrl()} className={linkClass}>
+            <li className="flex gap-3.5">
+              <Phone
+                aria-hidden="true"
+                className="text-gold mt-[3px] size-[18px] shrink-0 stroke-[1.5]"
+              />
+              <a href={telUrl()} className={contactLink}>
                 {siteConfig.phone}
               </a>
             </li>
-            <li className="flex gap-3">
-              <WhatsAppIcon className="text-gold mt-1 size-5 shrink-0" />
+            <li className="flex gap-3.5">
+              <WhatsAppIcon className="text-gold mt-[3px] size-[18px] shrink-0 stroke-[1.5]" />
               <a
                 href={whatsappUrl(locale)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={linkClass}
+                className={contactLink}
               >
                 {tc("whatsappUs")}
               </a>
             </li>
-            <li className="flex gap-3">
-              <Mail aria-hidden="true" className="text-gold mt-1 size-5 shrink-0" />
-              <a href={`mailto:${siteConfig.emails.info}`} className={`${linkClass} break-all`}>
-                {siteConfig.emails.info}
+            <li className="flex gap-3.5">
+              <Mail
+                aria-hidden="true"
+                className="text-gold mt-[3px] size-[18px] shrink-0 stroke-[1.5]"
+              />
+              <a href={`mailto:${siteConfig.emails.info}`} className={contactLink}>
+                {siteConfig.emails.info.split("@")[0]}
+                <wbr />@{siteConfig.emails.info.split("@")[1]}
               </a>
             </li>
-            <li className="flex gap-3">
-              <Clock aria-hidden="true" className="text-gold mt-1 size-5 shrink-0" />
+            <li className="flex gap-3.5">
+              <Clock
+                aria-hidden="true"
+                className="text-gold mt-[3px] size-[18px] shrink-0 stroke-[1.5]"
+              />
               <span>{t(siteConfig.businessHours, locale)}</span>
             </li>
           </ul>
