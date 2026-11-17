@@ -154,9 +154,9 @@ export const siteConfig = {
     gu: "સાચી ગુણવત્તા, નેક ઇરાદાથી",
   } as Localized<string>,
   description: {
-    en: "Filtered groundnut oil and refined cottonseed, sunflower, corn and palm oil, packed in Rajkot, Gujarat for homes, dealers and bulk buyers.",
-    hi: "फ़िल्टर्ड मूंगफली तेल और रिफ़ाइंड बिनौला, सूरजमुखी, मक्का और पाम तेल, राजकोट, गुजरात में घरों, डीलरों और थोक ख़रीदारों के लिए पैक किया गया।",
-    gu: "ફિલ્ટર્ડ સીંગતેલ અને રિફાઇન્ડ કપાસિયા, સૂરજમુખી, મકાઈ અને પામ તેલ, રાજકોટ, ગુજરાતમાં ઘર, ડીલરો અને જથ્થાબંધ ખરીદદારો માટે પેક કરેલું.",
+    en: "Filtered groundnut oil and refined cottonseed, sunflower and corn oil, packed in Rajkot, Gujarat for homes, dealers and bulk buyers.",
+    hi: "फ़िल्टर्ड मूंगफली तेल और रिफ़ाइंड बिनौला, सूरजमुखी और मक्का तेल, राजकोट, गुजरात में घरों, डीलरों और थोक ख़रीदारों के लिए पैक किया गया।",
+    gu: "ફિલ્ટર્ડ સીંગતેલ અને રિફાઇન્ડ કપાસિયા, સૂરજમુખી અને મકાઈ તેલ, રાજકોટ, ગુજરાતમાં ઘર, ડીલરો અને જથ્થાબંધ ખરીદદારો માટે પેક કરેલું.",
   } as Localized<string>,
   establishedYear: 2026,
   location: {
@@ -211,7 +211,7 @@ export const siteConfig = {
       label: { en: "Litres packed daily", hi: "लीटर रोज़ाना क्षमता", gu: "લિટર દૈનિક ક્ષમતા" },
       value: "2,000",
     },
-    { label: { en: "Edible oils", hi: "खाद्य तेल", gu: "ખાદ્યતેલ" }, value: "5" },
+    { label: { en: "Edible oils", hi: "खाद्य तेल", gu: "ખાદ્યતેલ" }, value: "4" },
     { label: { en: "Pack sizes", hi: "पैक साइज़", gu: "પેક સાઇઝ" }, value: "4" },
     {
       label: { en: "Currently serving", hi: "वर्तमान में सेवा", gu: "હાલમાં સેવા" },
@@ -486,54 +486,6 @@ export const products: Product[] = [
       {
         src: `${PLACEHOLDER}/product-corn-oil-2.svg`,
         alt: { en: "Corn oil pack sizes", hi: "मक्के के तेल के पैक साइज़", gu: "મકાઈના તેલના પેક સાઇઝ" },
-      }, // TODO: replace
-    ],
-    featured: false,
-  },
-  {
-    slug: "palm-oil",
-    name: { en: "Palm Oil", hi: "पाम तेल", gu: "પામ તેલ" },
-    shortDescription: {
-      en: "A stable, economical frying oil for hotels, caterers and food manufacturers.",
-      hi: "टिकाऊ और किफ़ायती तलने का तेल, होटलों, कैटरर और खाद्य निर्माताओं के लिए।",
-      gu: "ટકાઉ અને કિફાયતી તળવાનું તેલ, હોટલો, કેટરરો અને ખાદ્ય ઉત્પાદકો માટે.",
-    },
-    longDescription: {
-      en: "Palm oil stays stable under long, high-heat frying, which makes it a practical choice for commercial kitchens and food production. It is supplied mainly in tins for bulk buyers.",
-      hi: "पाम तेल लंबे समय तक तेज़ आँच पर तलने में भी स्थिर रहता है, इसलिए व्यावसायिक रसोई और खाद्य उत्पादन के लिए यह व्यावहारिक विकल्प है। यह मुख्य रूप से थोक ख़रीदारों के लिए टिन में दिया जाता है।",
-      gu: "પામ તેલ લાંબો સમય ઊંચા તાપે તળવામાં પણ સ્થિર રહે છે, તેથી વ્યાવસાયિક રસોડાં અને ખાદ્ય ઉત્પાદન માટે તે વ્યવહારુ પસંદગી છે. તે મુખ્યત્વે જથ્થાબંધ ખરીદદારો માટે ડબ્બામાં આપવામાં આવે છે.",
-    },
-    type: "refined",
-    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
-    nutrition: oilNutrition("49 g", "37 g", "9 g", "16 mg"), // TODO: replace with lab values
-    uses: {
-      en: [
-        "Commercial deep frying",
-        "Bakery and confectionery",
-        "Namkeen manufacturing",
-        "Hotels and catering",
-      ],
-      hi: ["व्यावसायिक डीप फ्राई", "बेकरी और कन्फेक्शनरी", "नमकीन निर्माण", "होटल और कैटरिंग"],
-      gu: ["વ્યાવસાયિક તળણ", "બેકરી અને કન્ફેક્શનરી", "નમકીન ઉત્પાદન", "હોટલ અને કેટરિંગ"],
-    },
-    shelfLife: {
-      en: "12 months from the date of packing",
-      hi: "पैकिंग की तारीख से 12 महीने",
-      gu: "પેકિંગની તારીખથી 12 મહિના",
-    },
-    storage: OIL_STORAGE,
-    images: [
-      {
-        src: `${PLACEHOLDER}/product-palm-oil.svg`,
-        alt: {
-          en: "Tin of TATTVA FRESH palm oil",
-          hi: "तत्त्व फ्रेश पाम तेल का टिन",
-          gu: "તત્ત્વ ફ્રેશ પામ તેલનો ડબ્બો",
-        },
-      }, // TODO: replace
-      {
-        src: `${PLACEHOLDER}/product-palm-oil-2.svg`,
-        alt: { en: "Palm oil pack sizes", hi: "पाम तेल के पैक साइज़", gu: "પામ તેલના પેક સાઇઝ" },
       }, // TODO: replace
     ],
     featured: false,
@@ -867,9 +819,9 @@ export const faqs: Faq[] = [
       gu: "તમે કયાં કયાં તેલ બનાવો છો?",
     },
     answer: {
-      en: "We offer five edible oils: filtered groundnut oil, refined cottonseed oil, refined sunflower oil, corn oil and palm oil.",
-      hi: "हम पाँच खाद्य तेल देते हैं: फ़िल्टर्ड मूंगफली तेल, रिफ़ाइंड बिनौला तेल, रिफ़ाइंड सूरजमुखी तेल, मक्के का तेल और पाम तेल।",
-      gu: "અમે પાંચ ખાદ્યતેલ આપીએ છીએ: ફિલ્ટર્ડ સીંગતેલ, રિફાઇન્ડ કપાસિયા તેલ, રિફાઇન્ડ સૂરજમુખી તેલ, મકાઈનું તેલ અને પામ તેલ.",
+      en: "We offer four edible oils: filtered groundnut oil, refined cottonseed oil, refined sunflower oil and corn oil.",
+      hi: "हम चार खाद्य तेल देते हैं: फ़िल्टर्ड मूंगफली तेल, रिफ़ाइंड बिनौला तेल, रिफ़ाइंड सूरजमुखी तेल और मक्के का तेल।",
+      gu: "અમે ચાર ખાદ્યતેલ આપીએ છીએ: ફિલ્ટર્ડ સીંગતેલ, રિફાઇન્ડ કપાસિયા તેલ, રિફાઇન્ડ સૂરજમુખી તેલ અને મકાઈનું તેલ.",
     },
   },
   {
@@ -919,9 +871,9 @@ export const faqs: Faq[] = [
       gu: "મારે કયું તેલ પસંદ કરવું?",
     },
     answer: {
-      en: "Groundnut oil suits traditional Gujarati cooking and farsan. Sunflower and corn oil are light choices for everyday meals. Cottonseed oil is popular for sweets and namkeen, and palm oil is mostly used for commercial frying.",
-      hi: "मूंगफली तेल पारंपरिक गुजराती खाने और नमकीन के लिए अच्छा है। सूरजमुखी और मक्के का तेल रोज़ के खाने के लिए हल्के विकल्प हैं। बिनौला तेल मिठाई और नमकीन के लिए लोकप्रिय है, और पाम तेल ज़्यादातर व्यावसायिक तलने में इस्तेमाल होता है।",
-      gu: "સીંગતેલ પરંપરાગત ગુજરાતી રસોઈ અને ફરસાણ માટે સારું છે. સૂરજમુખી અને મકાઈનું તેલ રોજના ભોજન માટે હળવા વિકલ્પ છે. કપાસિયા તેલ મીઠાઈ અને નમકીન માટે લોકપ્રિય છે, અને પામ તેલ મોટે ભાગે વ્યાવસાયિક તળણમાં વપરાય છે.",
+      en: "Groundnut oil suits traditional Gujarati cooking and farsan. Sunflower and corn oil are light choices for everyday meals. Cottonseed oil is popular for sweets, namkeen and commercial frying.",
+      hi: "मूंगफली तेल पारंपरिक गुजराती खाने और नमकीन के लिए अच्छा है। सूरजमुखी और मक्के का तेल रोज़ के खाने के लिए हल्के विकल्प हैं। बिनौला तेल मिठाई, नमकीन और व्यावसायिक तलने के लिए लोकप्रिय है।",
+      gu: "સીંગતેલ પરંપરાગત ગુજરાતી રસોઈ અને ફરસાણ માટે સારું છે. સૂરજમુખી અને મકાઈનું તેલ રોજના ભોજન માટે હળવા વિકલ્પ છે. કપાસિયા તેલ મીઠાઈ, નમકીન અને વ્યાવસાયિક તળણ માટે લોકપ્રિય છે.",
     },
   },
   {
@@ -932,9 +884,9 @@ export const faqs: Faq[] = [
       gu: "શું આ તેલ તળવા માટે વાપરી શકાય?",
     },
     answer: {
-      en: "Yes. All five oils have a high smoke point and are suited to frying. For long, high-heat frying in commercial kitchens, cottonseed and palm oil are the usual choice.",
-      hi: "हाँ। पाँचों तेलों का स्मोक पॉइंट ऊँचा है और ये तलने के लिए उपयुक्त हैं। व्यावसायिक रसोई में लंबे समय तक तेज़ आँच पर तलने के लिए आम तौर पर बिनौला और पाम तेल चुना जाता है।",
-      gu: "હા. પાંચેય તેલનો સ્મોક પોઇન્ટ ઊંચો છે અને તે તળવા માટે યોગ્ય છે. વ્યાવસાયિક રસોડામાં લાંબો સમય ઊંચા તાપે તળવા માટે સામાન્ય રીતે કપાસિયા અને પામ તેલ પસંદ કરાય છે.",
+      en: "Yes. All four oils have a high smoke point and are suited to frying. For long, high-heat frying in commercial kitchens, cottonseed oil is the usual choice.",
+      hi: "हाँ। चारों तेलों का स्मोक पॉइंट ऊँचा है और ये तलने के लिए उपयुक्त हैं। व्यावसायिक रसोई में लंबे समय तक तेज़ आँच पर तलने के लिए आम तौर पर बिनौला तेल चुना जाता है।",
+      gu: "હા. ચારેય તેલનો સ્મોક પોઇન્ટ ઊંચો છે અને તે તળવા માટે યોગ્ય છે. વ્યાવસાયિક રસોડામાં લાંબો સમય ઊંચા તાપે તળવા માટે સામાન્ય રીતે કપાસિયા તેલ પસંદ કરાય છે.",
     },
   },
   {
