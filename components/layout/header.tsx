@@ -21,7 +21,7 @@ export function Logo({ brand }: { brand: string }) {
           fill="var(--gold)"
         />
       </svg>
-      <span className="font-heading text-brown-dark text-[1.35rem] leading-tight font-medium tracking-tight">
+      <span className="brand-word font-heading text-brown-dark text-[1.35rem] leading-tight font-medium">
         {brand}
       </span>
     </span>

@@ -148,29 +148,31 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <StatsBand />
 
       {/* Testimonials */}
-      <section className="section">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow={th("testimonialsEyebrow")}
-            title={th("testimonialsTitle")}
-            className="mb-12"
-          />
-          <Testimonials
-            items={testimonials.map((item) => ({
-              name: t(item.name, locale),
-              role: t(item.role, locale),
-              quote: t(item.quote, locale),
-              rating: item.rating,
-              ratingLabel: tc("rating", { rating: item.rating }),
-            }))}
-            labels={{
-              region: th("testimonialsTitle"),
-              previous: th("previous"),
-              next: th("next"),
-            }}
-          />
-        </div>
-      </section>
+      {testimonials.length > 0 && (
+        <section className="section">
+          <div className="container-page">
+            <SectionHeading
+              eyebrow={th("testimonialsEyebrow")}
+              title={th("testimonialsTitle")}
+              className="mb-12"
+            />
+            <Testimonials
+              items={testimonials.map((item) => ({
+                name: t(item.name, locale),
+                role: t(item.role, locale),
+                quote: t(item.quote, locale),
+                rating: item.rating,
+                ratingLabel: tc("rating", { rating: item.rating }),
+              }))}
+              labels={{
+                region: th("testimonialsTitle"),
+                previous: th("previous"),
+                next: th("next"),
+              }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Distributor band */}
       <section className="bg-leaf-dark texture-grain">

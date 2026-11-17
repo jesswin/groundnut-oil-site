@@ -55,20 +55,22 @@ export default async function QualityPage({ params }: PageProps<"/[locale]/quali
                   {certifications.gst}
                 </p>
               </div>
-              <div className="card-surface p-7">
-                <h3 className="text-xl">{tq("otherTitle")}</h3>
-                <ul className="mt-3 space-y-2">
-                  {certifications.others.map((cert) => (
-                    <li
-                      key={cert}
-                      className="text-brown-dark flex items-center gap-2.5 text-lg font-medium"
-                    >
-                      <BadgeCheck aria-hidden="true" className="text-leaf size-6 shrink-0" />
-                      {cert}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {certifications.others.length > 0 && (
+                <div className="card-surface p-7">
+                  <h3 className="text-xl">{tq("otherTitle")}</h3>
+                  <ul className="mt-3 space-y-2">
+                    {certifications.others.map((cert) => (
+                      <li
+                        key={cert}
+                        className="text-brown-dark flex items-center gap-2.5 text-lg font-medium"
+                      >
+                        <BadgeCheck aria-hidden="true" className="text-leaf size-6 shrink-0" />
+                        {cert}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

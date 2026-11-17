@@ -32,7 +32,7 @@
     "contactUs": "Contact Us",
     "becomeDistributor": "Become a Distributor",
     "readMore": "Read more",
-    "since": "Since {year}",
+    "since": "Est. {year}",
     "breadcrumb": "Breadcrumb",
     "rating": "Rated {rating} out of 5",
     "placeholderMap": "Map placeholder. Add your Google Maps embed link in site-config."
@@ -47,16 +47,17 @@
     "fssai": "FSSAI Lic. No.",
     "gst": "GSTIN",
     "rights": "© {year} {brand}. All rights reserved.",
-    "social": "{network} (opens in a new tab)"
+    "social": "{network} (opens in a new tab)",
+    "company": "A brand of {company}"
   },
   "home": {
-    "metaTitle": "Pure Groundnut Oil Manufacturer",
-    "heroBadge": "Pure groundnut oil, made the traditional way",
+    "metaTitle": "Edible Oil Manufacturer in Rajkot",
+    "heroBadge": "Edible oils from Rajkot, Gujarat",
     "whyEyebrow": "Why choose us",
     "whyTitle": "Oil you can trust in your kitchen",
     "featuredEyebrow": "Our range",
     "featuredTitle": "Featured products",
-    "featuredText": "From wood-pressed oil for the home to bulk supply for kitchens and food makers.",
+    "featuredText": "From 1 L bottles for the home to 15 kg tins for kitchens, dealers and food makers.",
     "processEyebrow": "From seed to bottle",
     "processTitle": "How our oil is made",
     "processText": "Six careful steps, with nothing added along the way.",
@@ -71,14 +72,14 @@
     "faqEyebrow": "Questions",
     "faqTitle": "Frequently asked questions",
     "faqCta": "View all FAQs",
-    "finalTitle": "Need groundnut oil in bulk?",
+    "finalTitle": "Need edible oil in bulk?",
     "finalText": "Tell us what you need and our sales team will get back to you with rates and delivery details."
   },
   "about": {
     "title": "About Us",
-    "description": "Our story, our people and the factory behind every bottle of groundnut oil.",
+    "description": "Our story, our values and the factory behind every TATTVA FRESH bottle and tin.",
     "eyebrow": "Our story",
-    "storyTitle": "A family business built on pure oil",
+    "storyTitle": "Built on honest, pure oil",
     "missionTitle": "Our mission",
     "visionTitle": "Our vision",
     "teamEyebrow": "The people",
@@ -90,7 +91,7 @@
   },
   "products": {
     "title": "Our Products",
-    "description": "Cold-pressed, filtered and refined groundnut oil, plus groundnut oil cake, in retail and bulk packs.",
+    "description": "Filtered groundnut oil and refined cottonseed, sunflower, corn and palm oil, in 1 L bottles, 5 L cans and 15 L or 15 kg tins.",
     "filterType": "Type",
     "filterPack": "Pack size",
     "filtersLabel": "Filter products",
@@ -116,7 +117,7 @@
   },
   "process": {
     "title": "Our Process",
-    "description": "How groundnuts become oil in our factory: six steps from seed sourcing to quality check.",
+    "description": "How our oil is made: six steps from sourcing to quality check.",
     "intro": "Good oil starts with good seed and a careful hand. This is how every batch is made.",
     "step": "Step {number}",
     "ctaTitle": "Want to see it for yourself?",
@@ -136,8 +137,8 @@
   },
   "bulk": {
     "title": "Bulk Orders",
-    "description": "Factory-direct groundnut oil for hotels, caterers, food manufacturers and retailers. Send us your requirement.",
-    "intro": "We supply hotels, restaurants, caterers, sweet and farsan makers, food manufacturers and retailers directly from our factory.",
+    "description": "Factory-direct edible oil for hotels, restaurants, caterers, sweet shops and exporters. Minimum order 50 tins.",
+    "intro": "We supply hotels, restaurants, caterers, sweet shops, food manufacturers and exporters directly from our factory in Rajkot.",
     "benefitsTitle": "Why buy from us",
     "moqTitle": "Minimum order",
     "deliveryTitle": "Delivery",
@@ -146,7 +147,7 @@
   },
   "distributor": {
     "title": "Become a Distributor",
-    "description": "Apply for a distributorship or dealership and grow with a trusted groundnut oil manufacturer.",
+    "description": "Apply for a distributorship or dealership and grow with TATTVA FRESH, an edible oil brand from Rajkot.",
     "intro": "We are looking for committed partners to take our oil to new towns and cities.",
     "benefitsTitle": "What you get as a partner",
     "formTitle": "Dealership application",
@@ -164,17 +165,18 @@
     "hoursTitle": "Business hours",
     "mapTitle": "Our location on the map",
     "generalEnquiries": "General enquiries",
-    "salesEnquiries": "Sales"
+    "salesEnquiries": "Sales",
+    "openMap": "Open in Google Maps"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "description": "Answers to common questions about our groundnut oil, its use, orders and delivery.",
+    "description": "Answers to common questions about our oils, their use, orders and delivery.",
     "moreTitle": "Still have a question?",
     "moreText": "Send us a message and we will be glad to help."
   },
   "blog": {
     "title": "Blog",
-    "description": "Articles on groundnut oil, health and cooking.",
+    "description": "Articles on edible oils, health and cooking.",
     "fallbackNotice": "This article is not yet available in your language, so it is shown in English.",
     "publishedOn": "Published on {date}",
     "minRead": "{minutes} min read",

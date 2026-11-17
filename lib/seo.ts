@@ -106,6 +106,7 @@ export function organizationJsonLd(locale: string) {
     "@type": "Organization",
     "@id": `${getSiteUrl()}/#organization`,
     name: t(siteConfig.brandName, locale),
+    legalName: siteConfig.companyName.en,
     description: t(siteConfig.description, locale),
     url: localeUrl(locale),
     logo: `${getSiteUrl()}/icon.svg`,
@@ -149,7 +150,7 @@ export function productJsonLd(product: Product, locale: string) {
     description: t(product.shortDescription, locale),
     image: product.images.map((img) => `${getSiteUrl()}${img.src}`),
     url: localeUrl(locale, `/products/${product.slug}`),
-    category: "Groundnut oil",
+    category: "Edible oil",
     brand: { "@type": "Brand", name: t(siteConfig.brandName, locale) },
     manufacturer: { "@id": `${getSiteUrl()}/#organization` },
   };

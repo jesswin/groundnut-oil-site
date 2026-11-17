@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- TODO: replace with your brand favicon -->
-  <rect width="64" height="64" rx="14" fill="#3B332A"/>
-  <path d="M32 10c9 12 15 20 15 29a15 15 0 0 1-30 0c0-9 6-17 15-29z" fill="#A8874A"/>
+  <rect width="64" height="64" rx="14" fill="#1D1B17"/>
+  <path d="M32 9c9 12 14.500 20 14.500 29a14.500 14.500 0 0 1-29 0c0-9 5.500-17 14.500-29z" fill="none" stroke="#A8874A" stroke-width="2.500"/>
+  <path d="M32 25c4.500 6 7 10 7 14a7 7 0 0 1-14 0c0-4 2.500-8 7-14z" fill="#A8874A"/>
 </svg>

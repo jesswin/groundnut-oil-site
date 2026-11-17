@@ -141,91 +141,103 @@ const PLACEHOLDER = "/images/placeholders"; // TODO: replace placeholder images 
  * ========================================================================== */
 
 export const siteConfig = {
-  brandName: { en: "Brand Name", hi: "ब्रांड नाम", gu: "બ્રાન્ડ નામ" } as Localized<string>, // TODO: replace
+  brandName: { en: "TATTVA FRESH", hi: "तत्त्व फ्रेश", gu: "તત્ત્વ ફ્રેશ" } as Localized<string>,
+  /** Parent company, shown in the footer and structured data. */
+  companyName: {
+    en: "Shree Ram Food Corporate",
+    hi: "श्री राम फ़ूड कॉर्पोरेट",
+    gu: "શ્રી રામ ફૂડ કોર્પોરેટ",
+  } as Localized<string>,
   tagline: {
-    en: "Your Tagline Here",
-    hi: "आपकी टैगलाइन यहाँ",
-    gu: "તમારી ટેગલાઇન અહીં",
-  } as Localized<string>, // TODO: replace
+    en: "Real Goodness, Pressed With Purpose",
+    hi: "असली अच्छाई, नेक इरादे से",
+    gu: "સાચી ગુણવત્તા, નેક ઇરાદાથી",
+  } as Localized<string>,
   description: {
-    en: "Short brand description for SEO and footer.",
-    hi: "एसईओ और फ़ुटर के लिए ब्रांड का संक्षिप्त परिचय।",
-    gu: "SEO અને ફૂટર માટે બ્રાન્ડનું ટૂંકું વર્ણન.",
-  } as Localized<string>, // TODO: replace
-  establishedYear: 2000, // TODO: replace
+    en: "Filtered groundnut oil and refined cottonseed, sunflower, corn and palm oil, packed in Rajkot, Gujarat for homes, dealers and bulk buyers.",
+    hi: "फ़िल्टर्ड मूंगफली तेल और रिफ़ाइंड बिनौला, सूरजमुखी, मक्का और पाम तेल, राजकोट, गुजरात में घरों, डीलरों और थोक ख़रीदारों के लिए पैक किया गया।",
+    gu: "ફિલ્ટર્ડ સીંગતેલ અને રિફાઇન્ડ કપાસિયા, સૂરજમુખી, મકાઈ અને પામ તેલ, રાજકોટ, ગુજરાતમાં ઘર, ડીલરો અને જથ્થાબંધ ખરીદદારો માટે પેક કરેલું.",
+  } as Localized<string>,
+  establishedYear: 2026,
   location: {
-    city: { en: "City", hi: "शहर", gu: "શહેર" } as Localized<string>, // TODO: replace
-    state: { en: "State", hi: "राज्य", gu: "રાજ્ય" } as Localized<string>, // TODO: replace
+    city: { en: "Rajkot", hi: "राजकोट", gu: "રાજકોટ" } as Localized<string>,
+    state: { en: "Gujarat", hi: "गुजरात", gu: "ગુજરાત" } as Localized<string>,
     country: { en: "India", hi: "भारत", gu: "ભારત" } as Localized<string>,
   },
   address: {
     line1: {
-      en: "Factory Address Line 1",
-      hi: "फ़ैक्टरी का पता, पंक्ति 1",
-      gu: "ફેક્ટરીનું સરનામું, લાઇન 1",
-    } as Localized<string>, // TODO: replace
+      en: "Bombay Super Commercial Zone 18, Plot No. 22",
+      hi: "बॉम्बे सुपर कमर्शियल ज़ोन 18, प्लॉट नं. 22",
+      gu: "બોમ્બે સુપર કોમર્શિયલ ઝોન 18, પ્લોટ નં. 22",
+    } as Localized<string>,
     line2: {
-      en: "Industrial Area",
-      hi: "औद्योगिक क्षेत्र",
-      gu: "ઔદ્યોગિક વિસ્તાર",
-    } as Localized<string>, // TODO: replace
-    city: { en: "City", hi: "शहर", gu: "શહેર" } as Localized<string>, // TODO: replace
-    state: { en: "State", hi: "राज्य", gu: "રાજ્ય" } as Localized<string>, // TODO: replace
-    pincode: "000000", // TODO: replace
+      en: "Sokhada R.S. No. 97/3, Near Sokhada Chokdi, Sokhada",
+      hi: "सोखडा आर.एस. नं. 97/3, सोखडा चौकड़ी के पास, सोखडा",
+      gu: "સોખડા રે.સ. નં. 97/3, સોખડા ચોકડી પાસે, સોખડા",
+    } as Localized<string>,
+    city: { en: "Rajkot", hi: "राजकोट", gu: "રાજકોટ" } as Localized<string>,
+    state: { en: "Gujarat", hi: "गुजरात", gu: "ગુજરાત" } as Localized<string>,
+    pincode: "360003",
   },
   /** Google Maps "Embed a map" src URL. Leave empty to show a placeholder box. */
-  mapEmbedUrl: "", // TODO: replace
-  phone: "+91 00000 00000", // TODO: replace
+  mapEmbedUrl:
+    "https://maps.google.com/maps?q=Sokhada%20Chokdi%2C%20Sokhada%2C%20Rajkot%2C%20Gujarat%20360003&output=embed",
+  /** Link that opens the location in Google Maps. */
+  mapLink: "https://maps.app.goo.gl/uZgB6zA3Av4vcwVD8",
+  phone: "+91 76176 36936",
   /** Digits only, with country code, for wa.me links. */
-  whatsapp: "910000000000", // TODO: replace
+  whatsapp: "917617636936",
   whatsappMessage: {
-    en: "Hi, I'd like to enquire about your groundnut oil.",
-    hi: "नमस्ते, मुझे आपके मूंगफली तेल के बारे में जानकारी चाहिए।",
-    gu: "નમસ્તે, મારે તમારા સીંગતેલ વિશે પૂછપરછ કરવી છે.",
-  } as Localized<string>, // TODO: replace
+    en: "Hi, I'd like to enquire about TATTVA FRESH oils.",
+    hi: "नमस्ते, मुझे तत्त्व फ्रेश तेल के बारे में जानकारी चाहिए।",
+    gu: "નમસ્તે, મારે તત્ત્વ ફ્રેશ તેલ વિશે પૂછપરછ કરવી છે.",
+  } as Localized<string>,
   emails: {
-    info: "info@example.com", // TODO: replace
-    sales: "sales@example.com", // TODO: replace
+    info: "shreeramfoodcorporate@gmail.com",
+    sales: "shreeramfoodcorporate@gmail.com",
   },
   businessHours: {
-    en: "Mon–Sat, 9:00 AM – 7:00 PM",
-    hi: "सोम–शनि, सुबह 9:00 – शाम 7:00",
-    gu: "સોમ–શનિ, સવારે 9:00 – સાંજે 7:00",
-  } as Localized<string>, // TODO: replace
+    en: "Mon–Sun, 9:00 AM – 10:00 PM",
+    hi: "सोम–रवि, सुबह 9:00 – रात 10:00",
+    gu: "સોમ–રવિ, સવારે 9:00 – રાત્રે 10:00",
+  } as Localized<string>,
   certifications: {
-    fssai: "00000000000000", // TODO: replace
-    gst: "00XXXXX0000X0X0", // TODO: replace
-    others: ["ISO 22000", "AGMARK"], // TODO: replace
+    fssai: "10012345678901", // TODO: confirm, this looks like a sample number
+    gst: "24AGBFS0164J1Z3",
+    others: [] as string[],
   },
   stats: [
-    { label: { en: "Years Experience", hi: "वर्षों का अनुभव", gu: "વર્ષનો અનુભવ" }, value: "00+" }, // TODO: replace
     {
-      label: { en: "Tonnes/Day Capacity", hi: "टन/दिन क्षमता", gu: "ટન/દિવસ ક્ષમતા" },
-      value: "00", // TODO: replace
+      label: { en: "Litres packed daily", hi: "लीटर रोज़ाना क्षमता", gu: "લિટર દૈનિક ક્ષમતા" },
+      value: "2,000",
     },
-    { label: { en: "Dealers", hi: "डीलर", gu: "ડીલર" }, value: "000+" }, // TODO: replace
-    { label: { en: "Happy Families", hi: "संतुष्ट परिवार", gu: "સંતુષ્ટ પરિવારો" }, value: "0000+" }, // TODO: replace
+    { label: { en: "Edible oils", hi: "खाद्य तेल", gu: "ખાદ્યતેલ" }, value: "5" },
+    { label: { en: "Pack sizes", hi: "पैक साइज़", gu: "પેક સાઇઝ" }, value: "4" },
+    {
+      label: { en: "Currently serving", hi: "वर्तमान में सेवा", gu: "હાલમાં સેવા" },
+      value: "Gujarat",
+    },
   ] as Stat[],
   social: {
-    instagram: "#", // TODO: replace
-    facebook: "#", // TODO: replace
-    youtube: "#", // TODO: replace
-    linkedin: "#", // TODO: replace
+    instagram: "https://www.instagram.com/tattvafreshgroundnutoil/",
+    facebook: "",
+    youtube: "https://www.youtube.com/@ShreeRamfoodcorporate",
+    linkedin: "",
   },
   b2b: {
     moq: {
-      en: "Minimum order quantity placeholder",
-      hi: "न्यूनतम ऑर्डर मात्रा (प्लेसहोल्डर)",
-      gu: "લઘુત્તમ ઓર્ડર જથ્થો (પ્લેસહોલ્ડર)",
-    } as Localized<string>, // TODO: replace
+      en: "50 tins (15 L or 15 kg). Pricing on request.",
+      hi: "50 टिन (15 लीटर या 15 किलो)। दाम पूछताछ पर।",
+      gu: "50 ડબ્બા (15 લિટર કે 15 કિલો). ભાવ પૂછપરછ પર.",
+    } as Localized<string>,
     delivery: {
       en: "Pan-India delivery",
       hi: "पूरे भारत में डिलीवरी",
       gu: "સમગ્ર ભારતમાં ડિલિવરી",
-    } as Localized<string>, // TODO: replace
+    } as Localized<string>,
   },
   /** Overridden by NEXT_PUBLIC_SITE_URL when that env var is set. */
-  siteUrl: "https://example.com", // TODO: replace
+  siteUrl: "https://example.com", // TODO: replace with your domain
 };
 
 /* ============================================================================
@@ -241,8 +253,8 @@ export const productTypes: Record<ProductType, Localized<string>> = {
 
 export const packSizes: Record<PackSizeId, Localized<string>> = {
   "500ml": { en: "500 ml", hi: "500 मि.ली.", gu: "500 મિ.લિ." },
-  "1l": { en: "1 L", hi: "1 लीटर", gu: "1 લિટર" },
-  "5l": { en: "5 L", hi: "5 लीटर", gu: "5 લિટર" },
+  "1l": { en: "1 L bottle", hi: "1 लीटर बोतल", gu: "1 લિટર બોટલ" },
+  "5l": { en: "5 L can", hi: "5 लीटर कैन", gu: "5 લિટર કેન" },
   "15l-tin": { en: "15 L tin", hi: "15 लीटर टिन", gu: "15 લિટર ડબ્બો" },
   "15kg-tin": { en: "15 kg tin", hi: "15 किलो टिन", gu: "15 કિલો ડબ્બો" },
   bulk: { en: "Bulk", hi: "थोक", gu: "જથ્થાબંધ" },
@@ -271,7 +283,7 @@ const N = {
   vitaminE: { en: "Vitamin E", hi: "विटामिन ई", gu: "વિટામિન ઈ" },
 } satisfies Record<string, Localized<string>>;
 
-/** Typical values for groundnut oil per 100 g. TODO: replace with your lab report values. */
+/** Typical values per 100 g. TODO: replace with your lab report values. */
 function oilNutrition(saturated: string, mufa: string, pufa: string, vitaminE: string) {
   return [
     { label: N.energy, value: "884 kcal" },
@@ -295,205 +307,234 @@ const OIL_STORAGE: Localized<string> = {
 
 export const products: Product[] = [
   {
-    slug: "cold-pressed-groundnut-oil",
-    name: {
-      en: "Cold-Pressed (Wood-Pressed / Kachi Ghani) Groundnut Oil",
-      hi: "कोल्ड-प्रेस्ड (लकड़ी घानी / कच्ची घानी) मूंगफली तेल",
-      gu: "કોલ્ડ-પ્રેસ્ડ (લાકડાની ઘાણી / કાચી ઘાણી) સીંગતેલ",
-    }, // TODO: replace
-    shortDescription: {
-      en: "Slow-pressed at low temperature to keep the natural aroma, colour and nutrients of the groundnut.",
-      hi: "कम तापमान पर धीरे-धीरे निकाला गया तेल, जिसमें मूंगफली की प्राकृतिक सुगंध, रंग और पोषक तत्व बने रहते हैं।",
-      gu: "ઓછા તાપમાને ધીમે ધીમે પીલેલું તેલ, જેમાં સીંગની કુદરતી સુગંધ, રંગ અને પોષક તત્ત્વો જળવાઈ રહે છે.",
-    }, // TODO: replace
-    longDescription: {
-      en: "Our cold-pressed groundnut oil is extracted in a traditional wooden ghani without external heat or chemicals. The result is a golden, nutty oil with nothing added and nothing taken away, the way it has been made for generations.",
-      hi: "हमारा कोल्ड-प्रेस्ड मूंगफली तेल पारंपरिक लकड़ी की घानी में, बिना बाहरी गर्मी या रसायनों के निकाला जाता है। नतीजा है सुनहरा, सोंधी महक वाला तेल, जिसमें न कुछ मिलाया गया है और न कुछ निकाला गया है, ठीक वैसा जैसा पीढ़ियों से बनता आया है।",
-      gu: "અમારું કોલ્ડ-પ્રેસ્ડ સીંગતેલ પરંપરાગત લાકડાની ઘાણીમાં, બહારની ગરમી કે રસાયણો વગર કાઢવામાં આવે છે. પરિણામે મળે છે સોનેરી, સીંગની મીઠી સુગંધવાળું તેલ, જેમાં કશું ઉમેર્યું નથી અને કશું કાઢ્યું નથી, પેઢીઓથી બનતું આવ્યું છે એવું જ.",
-    }, // TODO: replace
-    type: "cold-pressed",
-    packSizes: ["500ml", "1l", "5l", "15l-tin", "15kg-tin"],
-    nutrition: oilNutrition("17 g", "46 g", "32 g", "15.7 mg"), // TODO: replace
-    uses: {
-      en: [
-        "Everyday cooking and tadka",
-        "Traditional sweets and farsan",
-        "Pickles",
-        "Salad dressing",
-      ],
-      hi: ["रोज़ का खाना और तड़का", "पारंपरिक मिठाइयाँ और नमकीन", "अचार", "सलाद ड्रेसिंग"],
-      gu: ["રોજની રસોઈ અને વઘાર", "પરંપરાગત મીઠાઈ અને ફરસાણ", "અથાણાં", "સલાડ ડ્રેસિંગ"],
-    }, // TODO: replace
-    shelfLife: {
-      en: "9 months from the date of packing",
-      hi: "पैकिंग की तारीख से 9 महीने",
-      gu: "પેકિંગની તારીખથી 9 મહિના",
-    }, // TODO: replace
-    storage: OIL_STORAGE,
-    images: [
-      {
-        src: `${PLACEHOLDER}/product-cold-pressed.svg`, // TODO: replace
-        alt: {
-          en: "Bottle of cold-pressed groundnut oil",
-          hi: "कोल्ड-प्रेस्ड मूंगफली तेल की बोतल",
-          gu: "કોલ્ડ-પ્રેસ્ડ સીંગતેલની બોટલ",
-        },
-      },
-      {
-        src: `${PLACEHOLDER}/product-cold-pressed-2.svg`, // TODO: replace
-        alt: {
-          en: "Cold-pressed groundnut oil being poured",
-          hi: "कोल्ड-प्रेस्ड मूंगफली तेल डालते हुए",
-          gu: "કોલ્ડ-પ્રેસ્ડ સીંગતેલ રેડાતું દૃશ્ય",
-        },
-      },
-    ],
-    featured: true,
-  },
-  {
     slug: "filtered-groundnut-oil",
-    name: { en: "Filtered Groundnut Oil", hi: "फ़िल्टर्ड मूंगफली तेल", gu: "ફિલ્ટર્ડ સીંગતેલ" }, // TODO: replace
+    name: { en: "Filtered Groundnut Oil", hi: "फ़िल्टर्ड मूंगफली तेल", gu: "ફિલ્ટર્ડ સીંગતેલ" },
     shortDescription: {
-      en: "Expeller-pressed and double filtered for a clear oil with a rich groundnut taste.",
-      hi: "एक्सपेलर से निकाला और दो बार छाना गया साफ़ तेल, मूंगफली के भरपूर स्वाद के साथ।",
-      gu: "એક્સપેલરથી પીલેલું અને બે વાર ગાળેલું ચોખ્ખું તેલ, સીંગના ભરપૂર સ્વાદ સાથે.",
-    }, // TODO: replace
+      en: "Pressed from graded groundnuts and double filtered for a clear oil with a rich, nutty taste.",
+      hi: "छँटी हुई मूंगफली से निकाला और दो बार छाना गया साफ़ तेल, भरपूर सोंधे स्वाद के साथ।",
+      gu: "ગ્રેડ કરેલા સીંગદાણામાંથી પીલેલું અને બે વાર ગાળેલું ચોખ્ખું તેલ, સીંગના ભરપૂર સ્વાદ સાથે.",
+    },
     longDescription: {
-      en: "Filtered groundnut oil is pressed from graded seeds and passed through cloth filters to remove sediment, without chemical refining. It keeps its natural flavour and suits daily cooking and deep frying.",
-      hi: "फ़िल्टर्ड मूंगफली तेल छँटे हुए दानों से निकाला जाता है और कपड़े के फ़िल्टर से छानकर तलछट हटाई जाती है, बिना किसी रासायनिक रिफ़ाइनिंग के। इसका प्राकृतिक स्वाद बना रहता है और यह रोज़ के खाने और तलने के लिए उपयुक्त है।",
-      gu: "ફિલ્ટર્ડ સીંગતેલ ગ્રેડ કરેલા દાણામાંથી પીલવામાં આવે છે અને કાપડના ફિલ્ટરથી ગાળીને કચરો દૂર કરાય છે, કોઈ રાસાયણિક રિફાઇનિંગ વગર. તેનો કુદરતી સ્વાદ જળવાઈ રહે છે અને તે રોજની રસોઈ તથા તળવા માટે યોગ્ય છે.",
-    }, // TODO: replace
+      en: "Our filtered groundnut oil is pressed from graded Saurashtra groundnuts and passed through filters to remove sediment, without chemical refining. It keeps the natural aroma Gujarati kitchens know, and suits daily cooking, farsan and deep frying.",
+      hi: "हमारा फ़िल्टर्ड मूंगफली तेल सौराष्ट्र की छँटी हुई मूंगफली से निकाला जाता है और फ़िल्टर से छानकर तलछट हटाई जाती है, बिना किसी रासायनिक रिफ़ाइनिंग के। इसमें वही प्राकृतिक सुगंध रहती है जो गुजराती रसोई पहचानती है, और यह रोज़ के खाने, नमकीन और तलने के लिए उपयुक्त है।",
+      gu: "અમારું ફિલ્ટર્ડ સીંગતેલ સૌરાષ્ટ્રના ગ્રેડ કરેલા સીંગદાણામાંથી પીલવામાં આવે છે અને ફિલ્ટરથી ગાળીને કચરો દૂર કરાય છે, કોઈ રાસાયણિક રિફાઇનિંગ વગર. તેમાં એ જ કુદરતી સુગંધ રહે છે જે ગુજરાતી રસોડું ઓળખે છે, અને તે રોજની રસોઈ, ફરસાણ અને તળવા માટે યોગ્ય છે.",
+    },
     type: "filtered",
-    packSizes: ["1l", "5l", "15l-tin", "15kg-tin", "bulk"],
-    nutrition: oilNutrition("17 g", "46 g", "32 g", "14 mg"), // TODO: replace
+    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
+    nutrition: oilNutrition("17 g", "46 g", "32 g", "14 mg"), // TODO: replace with lab values
     uses: {
-      en: ["Daily cooking", "Deep frying", "Farsan and snacks", "Restaurant and catering kitchens"],
-      hi: ["रोज़ का खाना", "डीप फ्राई", "नमकीन और स्नैक्स", "रेस्टोरेंट और कैटरिंग रसोई"],
-      gu: ["રોજની રસોઈ", "તળવા માટે", "ફરસાણ અને નાસ્તા", "રેસ્ટોરન્ટ અને કેટરિંગ રસોડાં"],
-    }, // TODO: replace
+      en: ["Daily cooking and vaghar", "Farsan and snacks", "Deep frying", "Pickles"],
+      hi: ["रोज़ का खाना और तड़का", "नमकीन और स्नैक्स", "डीप फ्राई", "अचार"],
+      gu: ["રોજની રસોઈ અને વઘાર", "ફરસાણ અને નાસ્તા", "તળવા માટે", "અથાણાં"],
+    },
     shelfLife: {
       en: "9 months from the date of packing",
       hi: "पैकिंग की तारीख से 9 महीने",
       gu: "પેકિંગની તારીખથી 9 મહિના",
-    }, // TODO: replace
+    },
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-filtered.svg`, // TODO: replace
+        src: `${PLACEHOLDER}/product-filtered-groundnut-oil.svg`,
         alt: {
-          en: "Tin of filtered groundnut oil",
-          hi: "फ़िल्टर्ड मूंगफली तेल का टिन",
-          gu: "ફિલ્ટર્ડ સીંગતેલનો ડબ્બો",
+          en: "Bottle of TATTVA FRESH filtered groundnut oil",
+          hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल की बोतल",
+          gu: "તત્ત્વ ફ્રેશ ફિલ્ટર્ડ સીંગતેલની બોટલ",
         },
-      },
+      }, // TODO: replace
       {
-        src: `${PLACEHOLDER}/product-filtered-2.svg`, // TODO: replace
+        src: `${PLACEHOLDER}/product-filtered-groundnut-oil-2.svg`,
         alt: {
           en: "Filtered groundnut oil pack sizes",
           hi: "फ़िल्टर्ड मूंगफली तेल के पैक साइज़",
           gu: "ફિલ્ટર્ડ સીંગતેલના પેક સાઇઝ",
         },
-      },
+      }, // TODO: replace
     ],
     featured: true,
   },
   {
-    slug: "refined-groundnut-oil",
-    name: { en: "Refined Groundnut Oil", hi: "रिफ़ाइंड मूंगफली तेल", gu: "રિફાઇન્ડ સીંગતેલ" }, // TODO: replace
+    slug: "refined-cottonseed-oil",
+    name: { en: "Refined Cottonseed Oil", hi: "रिफ़ाइंड बिनौला तेल", gu: "રિફાઇન્ડ કપાસિયા તેલ" },
     shortDescription: {
-      en: "Light, neutral-tasting oil with a high smoke point, suited to high-heat cooking.",
-      hi: "हल्का, सादे स्वाद वाला तेल जिसका स्मोक पॉइंट ऊँचा है, तेज़ आँच पर पकाने के लिए उपयुक्त।",
-      gu: "હળવું, સાદા સ્વાદવાળું તેલ જેનો સ્મોક પોઇન્ટ ઊંચો છે, વધુ તાપે રાંધવા માટે યોગ્ય.",
-    }, // TODO: replace
+      en: "A light, neutral oil and a Gujarat favourite for farsan, sweets and everyday frying.",
+      hi: "हल्का, सादे स्वाद वाला तेल, गुजरात में नमकीन, मिठाई और रोज़ तलने के लिए पसंदीदा।",
+      gu: "હળવું, સાદા સ્વાદવાળું તેલ, ગુજરાતમાં ફરસાણ, મીઠાઈ અને રોજ તળવા માટે મનપસંદ.",
+    },
     longDescription: {
-      en: "Refined groundnut oil goes through a controlled refining process for a clear, light oil with a long shelf life. Its high smoke point makes it a dependable choice for frying in homes and commercial kitchens.",
-      hi: "रिफ़ाइंड मूंगफली तेल नियंत्रित रिफ़ाइनिंग प्रक्रिया से गुज़रता है, जिससे साफ़, हल्का और लंबे समय तक चलने वाला तेल मिलता है। ऊँचे स्मोक पॉइंट के कारण यह घरों और व्यावसायिक रसोई में तलने के लिए भरोसेमंद विकल्प है।",
-      gu: "રિફાઇન્ડ સીંગતેલ નિયંત્રિત રિફાઇનિંગ પ્રક્રિયામાંથી પસાર થાય છે, જેથી ચોખ્ખું, હળવું અને લાંબો સમય ટકે એવું તેલ મળે છે. ઊંચા સ્મોક પોઇન્ટને કારણે તે ઘર અને વ્યાવસાયિક રસોડામાં તળવા માટે ભરોસાપાત્ર પસંદગી છે.",
-    }, // TODO: replace
+      en: "Refined cottonseed oil has a clean taste and light colour that lets the food speak for itself. It holds up well in the kadai, which is why sweet shops, farsan makers and caterers across Gujarat rely on it.",
+      hi: "रिफ़ाइंड बिनौला तेल का स्वाद साफ़ और रंग हल्का होता है, जिससे खाने का असली स्वाद आता है। यह कड़ाही में अच्छा टिकता है, इसलिए गुजरात भर की मिठाई की दुकानें, नमकीन बनाने वाले और कैटरर इस पर भरोसा करते हैं।",
+      gu: "રિફાઇન્ડ કપાસિયા તેલનો સ્વાદ ચોખ્ખો અને રંગ આછો હોય છે, જેથી વાનગીનો સાચો સ્વાદ આવે છે. તે કડાઈમાં સારું ટકે છે, તેથી આખા ગુજરાતની મીઠાઈની દુકાનો, ફરસાણ બનાવનારા અને કેટરરો તેના પર ભરોસો રાખે છે.",
+    },
     type: "refined",
-    packSizes: ["500ml", "1l", "5l", "15l-tin", "15kg-tin", "bulk"],
-    nutrition: oilNutrition("18 g", "48 g", "30 g", "11 mg"), // TODO: replace
+    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
+    nutrition: oilNutrition("26 g", "18 g", "52 g", "35 mg"), // TODO: replace with lab values
     uses: {
-      en: ["Deep frying", "Stir-frying and sautéing", "Baking", "Commercial food production"],
-      hi: ["डीप फ्राई", "भूनना और हल्का तलना", "बेकिंग", "व्यावसायिक खाद्य उत्पादन"],
-      gu: ["તળવા માટે", "સાંતળવા અને શેકવા", "બેકિંગ", "વ્યાવસાયિક ખાદ્ય ઉત્પાદન"],
-    }, // TODO: replace
+      en: ["Farsan and namkeen", "Sweets", "Deep frying", "Commercial kitchens"],
+      hi: ["नमकीन और फरसाण", "मिठाइयाँ", "डीप फ्राई", "व्यावसायिक रसोई"],
+      gu: ["ફરસાણ અને નમકીન", "મીઠાઈ", "તળવા માટે", "વ્યાવસાયિક રસોડાં"],
+    },
     shelfLife: {
       en: "12 months from the date of packing",
       hi: "पैकिंग की तारीख से 12 महीने",
       gu: "પેકિંગની તારીખથી 12 મહિના",
-    }, // TODO: replace
+    },
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-refined.svg`, // TODO: replace
+        src: `${PLACEHOLDER}/product-refined-cottonseed-oil.svg`,
         alt: {
-          en: "Bottle of refined groundnut oil",
-          hi: "रिफ़ाइंड मूंगफली तेल की बोतल",
-          gu: "રિફાઇન્ડ સીંગતેલની બોટલ",
+          en: "Bottle of TATTVA FRESH refined cottonseed oil",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल की बोतल",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલની બોટલ",
         },
-      },
+      }, // TODO: replace
       {
-        src: `${PLACEHOLDER}/product-refined-2.svg`, // TODO: replace
+        src: `${PLACEHOLDER}/product-refined-cottonseed-oil-2.svg`,
         alt: {
-          en: "Refined groundnut oil pack sizes",
-          hi: "रिफ़ाइंड मूंगफली तेल के पैक साइज़",
-          gu: "રિફાઇન્ડ સીંગતેલના પેક સાઇઝ",
+          en: "Refined cottonseed oil pack sizes",
+          hi: "रिफ़ाइंड बिनौला तेल के पैक साइज़",
+          gu: "રિફાઇન્ડ કપાસિયા તેલના પેક સાઇઝ",
         },
-      },
+      }, // TODO: replace
     ],
     featured: true,
   },
   {
-    slug: "groundnut-oil-cake",
-    name: { en: "Groundnut Oil Cake", hi: "मूंगफली खली", gu: "સીંગખોળ" }, // TODO: replace
+    slug: "refined-sunflower-oil",
+    name: { en: "Refined Sunflower Oil", hi: "रिफ़ाइंड सूरजमुखी तेल", gu: "રિફાઇન્ડ સૂરજમુખી તેલ" },
     shortDescription: {
-      en: "Protein-rich cake left after pressing, used as cattle feed and organic manure.",
-      hi: "तेल निकालने के बाद बची प्रोटीन से भरपूर खली, पशु आहार और जैविक खाद के रूप में उपयोगी।",
-      gu: "તેલ કાઢ્યા પછી બચેલો પ્રોટીનથી ભરપૂર ખોળ, પશુઆહાર અને સેન્દ્રિય ખાતર તરીકે ઉપયોગી.",
-    }, // TODO: replace
+      en: "Light in taste and colour, with natural vitamin E, for everyday home cooking.",
+      hi: "स्वाद और रंग में हल्का, प्राकृतिक विटामिन ई के साथ, घर के रोज़ के खाने के लिए।",
+      gu: "સ્વાદ અને રંગમાં હળવું, કુદરતી વિટામિન ઈ સાથે, ઘરની રોજની રસોઈ માટે.",
+    },
     longDescription: {
-      en: "Groundnut oil cake is the solid that remains once oil is pressed from the seed. It is high in protein and is supplied in bulk to dairies, feed manufacturers and farmers.",
-      hi: "मूंगफली खली वह ठोस भाग है जो दानों से तेल निकालने के बाद बचता है। इसमें प्रोटीन भरपूर होता है और इसे डेयरियों, पशु आहार निर्माताओं और किसानों को थोक में दिया जाता है।",
-      gu: "સીંગખોળ એ દાણામાંથી તેલ કાઢ્યા પછી બચતો ઘન ભાગ છે. તેમાં પ્રોટીન ભરપૂર હોય છે અને તે ડેરીઓ, પશુઆહાર ઉત્પાદકો અને ખેડૂતોને જથ્થાબંધ આપવામાં આવે છે.",
-    }, // TODO: replace
-    type: "by-product",
-    packSizes: ["bulk"],
-    nutrition: [
-      { label: N.energy, value: "370 kcal" },
-      { label: N.protein, value: "45 g" },
-      { label: N.fat, value: "7 g" },
-      { label: N.carbs, value: "25 g" },
-      { label: N.fibre, value: "8 g" },
-    ], // TODO: replace
+      en: "Refined sunflower oil is light, clear and almost flavourless, so it suits everything from rotis and sabzi to baking. It is naturally rich in vitamin E and low in saturated fat.",
+      hi: "रिफ़ाइंड सूरजमुखी तेल हल्का, साफ़ और लगभग बिना स्वाद का होता है, इसलिए रोटी-सब्ज़ी से लेकर बेकिंग तक हर चीज़ में अच्छा लगता है। इसमें प्राकृतिक रूप से विटामिन ई भरपूर और संतृप्त वसा कम होती है।",
+      gu: "રિફાઇન્ડ સૂરજમુખી તેલ હળવું, ચોખ્ખું અને લગભગ સ્વાદ વગરનું હોય છે, તેથી રોટલી-શાકથી લઈને બેકિંગ સુધી બધામાં ચાલે છે. તેમાં કુદરતી રીતે વિટામિન ઈ ભરપૂર અને સંતૃપ્ત ચરબી ઓછી હોય છે.",
+    },
+    type: "refined",
+    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
+    nutrition: oilNutrition("10 g", "20 g", "66 g", "41 mg"), // TODO: replace with lab values
     uses: {
-      en: ["Cattle and poultry feed", "Organic manure", "Feed manufacturing"],
-      hi: ["पशु और मुर्गी आहार", "जैविक खाद", "पशु आहार निर्माण"],
-      gu: ["પશુ અને મરઘાં આહાર", "સેન્દ્રિય ખાતર", "પશુઆહાર ઉત્પાદન"],
-    }, // TODO: replace
+      en: ["Everyday cooking", "Shallow frying", "Baking", "Salad dressing"],
+      hi: ["रोज़ का खाना", "हल्का तलना", "बेकिंग", "सलाद ड्रेसिंग"],
+      gu: ["રોજની રસોઈ", "હળવું તળવું", "બેકિંગ", "સલાડ ડ્રેસિંગ"],
+    },
     shelfLife: {
-      en: "6 months from the date of packing",
-      hi: "पैकिंग की तारीख से 6 महीने",
-      gu: "પેકિંગની તારીખથી 6 મહિના",
-    }, // TODO: replace
-    storage: {
-      en: "Store in a dry, well-ventilated place, off the floor and away from moisture.",
-      hi: "सूखी और हवादार जगह पर, फ़र्श से ऊपर और नमी से दूर रखें।",
-      gu: "સૂકી અને હવાઉજાસવાળી જગ્યાએ, જમીનથી ઊંચે અને ભેજથી દૂર રાખો.",
-    }, // TODO: replace
+      en: "12 months from the date of packing",
+      hi: "पैकिंग की तारीख से 12 महीने",
+      gu: "પેકિંગની તારીખથી 12 મહિના",
+    },
+    storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-oil-cake.svg`, // TODO: replace
-        alt: { en: "Groundnut oil cake", hi: "मूंगफली खली", gu: "સીંગખોળ" },
-      },
-      {
-        src: `${PLACEHOLDER}/product-oil-cake-2.svg`, // TODO: replace
+        src: `${PLACEHOLDER}/product-refined-sunflower-oil.svg`,
         alt: {
-          en: "Bags of groundnut oil cake",
-          hi: "मूंगफली खली की बोरियाँ",
-          gu: "સીંગખોળની ગૂણીઓ",
+          en: "Bottle of TATTVA FRESH refined sunflower oil",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल की बोतल",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ સૂરજમુખી તેલની બોટલ",
         },
-      },
+      }, // TODO: replace
+      {
+        src: `${PLACEHOLDER}/product-refined-sunflower-oil-2.svg`,
+        alt: {
+          en: "Refined sunflower oil pack sizes",
+          hi: "रिफ़ाइंड सूरजमुखी तेल के पैक साइज़",
+          gu: "રિફાઇન્ડ સૂરજમુખી તેલના પેક સાઇઝ",
+        },
+      }, // TODO: replace
+    ],
+    featured: true,
+  },
+  {
+    slug: "corn-oil",
+    name: { en: "Corn Oil", hi: "मक्के का तेल", gu: "મકાઈનું તેલ" },
+    shortDescription: {
+      en: "A mild, golden oil with a high smoke point, for frying, sautéing and baking.",
+      hi: "हल्के स्वाद वाला सुनहरा तेल, ऊँचे स्मोक पॉइंट के साथ, तलने, भूनने और बेकिंग के लिए।",
+      gu: "હળવા સ્વાદવાળું સોનેરી તેલ, ઊંચા સ્મોક પોઇન્ટ સાથે, તળવા, સાંતળવા અને બેકિંગ માટે.",
+    },
+    longDescription: {
+      en: "Corn oil is refined for a clean, mild flavour and a high smoke point. It fries crisp without heaviness and works well in baking and stir-fries.",
+      hi: "मक्के का तेल साफ़, हल्के स्वाद और ऊँचे स्मोक पॉइंट के लिए रिफ़ाइन किया जाता है। यह बिना भारीपन के कुरकुरा तलता है और बेकिंग व स्टर-फ्राई में अच्छा काम करता है।",
+      gu: "મકાઈનું તેલ ચોખ્ખા, હળવા સ્વાદ અને ઊંચા સ્મોક પોઇન્ટ માટે રિફાઇન કરવામાં આવે છે. તે ભારેપણા વગર કડક તળે છે અને બેકિંગ તથા સ્ટર-ફ્રાયમાં સારું ચાલે છે.",
+    },
+    type: "refined",
+    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
+    nutrition: oilNutrition("13 g", "28 g", "55 g", "14 mg"), // TODO: replace with lab values
+    uses: {
+      en: ["Deep frying", "Stir-frying and sautéing", "Baking", "Snacks"],
+      hi: ["डीप फ्राई", "भूनना और हल्का तलना", "बेकिंग", "स्नैक्स"],
+      gu: ["તળવા માટે", "સાંતળવા અને શેકવા", "બેકિંગ", "નાસ્તા"],
+    },
+    shelfLife: {
+      en: "12 months from the date of packing",
+      hi: "पैकिंग की तारीख से 12 महीने",
+      gu: "પેકિંગની તારીખથી 12 મહિના",
+    },
+    storage: OIL_STORAGE,
+    images: [
+      {
+        src: `${PLACEHOLDER}/product-corn-oil.svg`,
+        alt: {
+          en: "Bottle of TATTVA FRESH corn oil",
+          hi: "तत्त्व फ्रेश मक्के के तेल की बोतल",
+          gu: "તત્ત્વ ફ્રેશ મકાઈના તેલની બોટલ",
+        },
+      }, // TODO: replace
+      {
+        src: `${PLACEHOLDER}/product-corn-oil-2.svg`,
+        alt: { en: "Corn oil pack sizes", hi: "मक्के के तेल के पैक साइज़", gu: "મકાઈના તેલના પેક સાઇઝ" },
+      }, // TODO: replace
+    ],
+    featured: false,
+  },
+  {
+    slug: "palm-oil",
+    name: { en: "Palm Oil", hi: "पाम तेल", gu: "પામ તેલ" },
+    shortDescription: {
+      en: "A stable, economical frying oil for hotels, caterers and food manufacturers.",
+      hi: "टिकाऊ और किफ़ायती तलने का तेल, होटलों, कैटरर और खाद्य निर्माताओं के लिए।",
+      gu: "ટકાઉ અને કિફાયતી તળવાનું તેલ, હોટલો, કેટરરો અને ખાદ્ય ઉત્પાદકો માટે.",
+    },
+    longDescription: {
+      en: "Palm oil stays stable under long, high-heat frying, which makes it a practical choice for commercial kitchens and food production. It is supplied mainly in tins for bulk buyers.",
+      hi: "पाम तेल लंबे समय तक तेज़ आँच पर तलने में भी स्थिर रहता है, इसलिए व्यावसायिक रसोई और खाद्य उत्पादन के लिए यह व्यावहारिक विकल्प है। यह मुख्य रूप से थोक ख़रीदारों के लिए टिन में दिया जाता है।",
+      gu: "પામ તેલ લાંબો સમય ઊંચા તાપે તળવામાં પણ સ્થિર રહે છે, તેથી વ્યાવસાયિક રસોડાં અને ખાદ્ય ઉત્પાદન માટે તે વ્યવહારુ પસંદગી છે. તે મુખ્યત્વે જથ્થાબંધ ખરીદદારો માટે ડબ્બામાં આપવામાં આવે છે.",
+    },
+    type: "refined",
+    packSizes: ["1l", "5l", "15l-tin", "15kg-tin"],
+    nutrition: oilNutrition("49 g", "37 g", "9 g", "16 mg"), // TODO: replace with lab values
+    uses: {
+      en: [
+        "Commercial deep frying",
+        "Bakery and confectionery",
+        "Namkeen manufacturing",
+        "Hotels and catering",
+      ],
+      hi: ["व्यावसायिक डीप फ्राई", "बेकरी और कन्फेक्शनरी", "नमकीन निर्माण", "होटल और कैटरिंग"],
+      gu: ["વ્યાવસાયિક તળણ", "બેકરી અને કન્ફેક્શનરી", "નમકીન ઉત્પાદન", "હોટલ અને કેટરિંગ"],
+    },
+    shelfLife: {
+      en: "12 months from the date of packing",
+      hi: "पैकिंग की तारीख से 12 महीने",
+      gu: "પેકિંગની તારીખથી 12 મહિના",
+    },
+    storage: OIL_STORAGE,
+    images: [
+      {
+        src: `${PLACEHOLDER}/product-palm-oil.svg`,
+        alt: {
+          en: "Tin of TATTVA FRESH palm oil",
+          hi: "तत्त्व फ्रेश पाम तेल का टिन",
+          gu: "તત્ત્વ ફ્રેશ પામ તેલનો ડબ્બો",
+        },
+      }, // TODO: replace
+      {
+        src: `${PLACEHOLDER}/product-palm-oil-2.svg`,
+        alt: { en: "Palm oil pack sizes", hi: "पाम तेल के पैक साइज़", gu: "પામ તેલના પેક સાઇઝ" },
+      }, // TODO: replace
     ],
     featured: false,
   },
@@ -506,48 +547,48 @@ export const products: Product[] = [
 export const heroImage = {
   src: `${PLACEHOLDER}/hero-product.svg`, // TODO: replace
   alt: {
-    en: "Groundnut oil bottle with groundnuts",
-    hi: "मूंगफली के साथ मूंगफली तेल की बोतल",
-    gu: "સીંગદાણા સાથે સીંગતેલની બોટલ",
+    en: "TATTVA FRESH edible oil bottle",
+    hi: "तत्त्व फ्रेश खाद्य तेल की बोतल",
+    gu: "તત્ત્વ ફ્રેશ ખાદ્યતેલની બોટલ",
   } as Localized<string>,
 };
 
 export const whyChooseUs: Feature[] = [
   {
     icon: "droplet",
-    title: { en: "100% Pure", hi: "100% शुद्ध", gu: "100% શુદ્ધ" },
+    title: { en: "Pure, Never Blended", hi: "शुद्ध, बिना मिलावट", gu: "શુદ્ધ, ભેળસેળ વગર" },
     description: {
-      en: "Only groundnut oil in every pack. No blending, no additives, no argemone or palm oil.",
-      hi: "हर पैक में सिर्फ़ मूंगफली का तेल। न मिलावट, न एडिटिव, न पाम या कोई दूसरा तेल।",
-      gu: "દરેક પેકમાં ફક્ત સીંગતેલ. કોઈ ભેળસેળ નહીં, કોઈ એડિટિવ નહીં, પામ કે બીજું કોઈ તેલ નહીં.",
-    }, // TODO: replace
+      en: "Each pack holds exactly the oil named on it. No blending, no additives.",
+      hi: "हर पैक में वही तेल जिसका नाम उस पर लिखा है। न मिलावट, न एडिटिव।",
+      gu: "દરેક પેકમાં એ જ તેલ જેનું નામ તેના પર લખ્યું છે. કોઈ ભેળસેળ નહીં, કોઈ એડિટિવ નહીં.",
+    },
   },
   {
-    icon: "leaf",
-    title: { en: "Traditional Process", hi: "पारंपरिक प्रक्रिया", gu: "પરંપરાગત પ્રક્રિયા" },
+    icon: "map",
+    title: { en: "Made in Rajkot", hi: "राजकोट में बना", gu: "રાજકોટમાં બનેલું" },
     description: {
-      en: "Pressed the way our elders did it, with modern hygiene at every step.",
-      hi: "तेल वैसे ही निकाला जाता है जैसे हमारे बुज़ुर्ग निकालते थे, हर चरण में आधुनिक स्वच्छता के साथ।",
-      gu: "તેલ એ જ રીતે પીલાય છે જે રીતે આપણા વડીલો પીલતા હતા, દરેક પગલે આધુનિક સ્વચ્છતા સાથે.",
-    }, // TODO: replace
+      en: "Packed at our own unit in Sokhada, in the heart of Saurashtra's oil country.",
+      hi: "सौराष्ट्र के तेल क्षेत्र के बीच, सोखडा में हमारी अपनी यूनिट में पैक।",
+      gu: "સૌરાષ્ટ્રના તેલ પ્રદેશની વચ્ચે, સોખડામાં અમારા પોતાના યુનિટમાં પેક.",
+    },
   },
   {
     icon: "clock",
-    title: { en: "Always Fresh", hi: "हमेशा ताज़ा", gu: "હંમેશાં તાજું" },
+    title: { en: "Packed Fresh", hi: "ताज़ा पैक", gu: "તાજું પેક" },
     description: {
-      en: "Pressed in small batches and packed soon after, so the oil reaches you fresh.",
-      hi: "छोटे बैच में निकाला और तुरंत पैक किया जाता है, ताकि तेल आप तक ताज़ा पहुँचे।",
-      gu: "નાના બેચમાં પીલીને તરત પેક કરવામાં આવે છે, જેથી તેલ તમારા સુધી તાજું પહોંચે.",
-    }, // TODO: replace
+      en: "Up to 2,000 litres packed every day, so stock moves fast and reaches you fresh.",
+      hi: "रोज़ 2,000 लीटर तक पैकिंग, ताकि माल जल्दी निकले और आप तक ताज़ा पहुँचे।",
+      gu: "રોજ 2,000 લિટર સુધી પેકિંગ, જેથી માલ ઝડપથી નીકળે અને તમારા સુધી તાજો પહોંચે.",
+    },
   },
   {
     icon: "shield",
-    title: { en: "Certified Quality", hi: "प्रमाणित गुणवत्ता", gu: "પ્રમાણિત ગુણવત્તા" },
+    title: { en: "FSSAI Licensed", hi: "FSSAI लाइसेंस प्राप्त", gu: "FSSAI લાઇસન્સ ધરાવતું" },
     description: {
-      en: "FSSAI licensed, with every batch tested before it leaves the factory.",
-      hi: "FSSAI लाइसेंस प्राप्त, और हर बैच फ़ैक्टरी से निकलने से पहले जाँचा जाता है।",
+      en: "Licensed by FSSAI, with every batch checked before it leaves the factory.",
+      hi: "FSSAI से लाइसेंस प्राप्त, और हर बैच फ़ैक्टरी से निकलने से पहले जाँचा जाता है।",
       gu: "FSSAI લાઇસન્સ ધરાવતું, અને દરેક બેચ ફેક્ટરીમાંથી નીકળતા પહેલાં ચકાસવામાં આવે છે.",
-    }, // TODO: replace
+    },
   },
 ];
 
@@ -558,62 +599,62 @@ export const whyChooseUs: Feature[] = [
 export const processSteps: ProcessStep[] = [
   {
     icon: "sprout",
-    title: { en: "Seed Sourcing", hi: "बीज की ख़रीद", gu: "દાણાની ખરીદી" },
+    title: { en: "Sourcing", hi: "ख़रीद", gu: "ખરીદી" },
     description: {
-      en: "We buy bold, mature groundnuts directly from trusted farmers and market yards in the growing region.",
-      hi: "हम मोटे, पके हुए मूंगफली के दाने सीधे भरोसेमंद किसानों और मंडियों से ख़रीदते हैं।",
-      gu: "અમે જાડા, પાકા સીંગદાણા સીધા ભરોસાપાત્ર ખેડૂતો અને માર્કેટ યાર્ડમાંથી ખરીદીએ છીએ.",
-    }, // TODO: replace
+      en: "We buy bold groundnuts from Saurashtra's market yards and source our other oils from trusted suppliers.",
+      hi: "हम सौराष्ट्र की मंडियों से मोटी मूंगफली ख़रीदते हैं और बाकी तेल भरोसेमंद सप्लायर से लेते हैं।",
+      gu: "અમે સૌરાષ્ટ્રના માર્કેટ યાર્ડમાંથી જાડા સીંગદાણા ખરીદીએ છીએ અને બાકીનાં તેલ ભરોસાપાત્ર સપ્લાયર પાસેથી લઈએ છીએ.",
+    },
     image: `${PLACEHOLDER}/process-1.svg`, // TODO: replace
   },
   {
     icon: "filter",
-    title: { en: "Cleaning & Grading", hi: "सफ़ाई और छँटाई", gu: "સફાઈ અને ગ્રેડિંગ" },
+    title: { en: "Inspection", hi: "जाँच", gu: "ચકાસણી" },
     description: {
-      en: "Seeds are cleaned of dust, stones and damaged kernels, then graded by size and quality.",
-      hi: "दानों से धूल, कंकड़ और ख़राब दाने हटाए जाते हैं, फिर आकार और गुणवत्ता के अनुसार छँटाई होती है।",
-      gu: "દાણામાંથી ધૂળ, કાંકરા અને બગડેલા દાણા દૂર કરાય છે, પછી કદ અને ગુણવત્તા પ્રમાણે ગ્રેડિંગ થાય છે.",
-    }, // TODO: replace
+      en: "Seed is cleaned and graded, and every incoming oil lot is checked before it is accepted.",
+      hi: "बीज की सफ़ाई और छँटाई होती है, और आने वाले हर तेल लॉट की जाँच के बाद ही उसे लिया जाता है।",
+      gu: "દાણાની સફાઈ અને ગ્રેડિંગ થાય છે, અને આવતા દરેક તેલ લોટની ચકાસણી પછી જ તેને સ્વીકારાય છે.",
+    },
     image: `${PLACEHOLDER}/process-2.svg`, // TODO: replace
   },
   {
     icon: "cog",
     title: { en: "Pressing", hi: "पेराई", gu: "પીલાણ" },
     description: {
-      en: "Graded seeds are pressed slowly so the oil keeps its natural aroma and nutrients.",
-      hi: "छँटे हुए दानों की धीरे-धीरे पेराई होती है, ताकि तेल की प्राकृतिक सुगंध और पोषक तत्व बने रहें।",
-      gu: "ગ્રેડ કરેલા દાણા ધીમે ધીમે પીલવામાં આવે છે, જેથી તેલની કુદરતી સુગંધ અને પોષક તત્ત્વો જળવાઈ રહે.",
-    }, // TODO: replace
+      en: "Groundnuts are expeller-pressed in small batches to keep their natural aroma.",
+      hi: "मूंगफली की पेराई छोटे बैच में एक्सपेलर से होती है, ताकि प्राकृतिक सुगंध बनी रहे।",
+      gu: "સીંગદાણાનું પીલાણ નાના બેચમાં એક્સપેલરથી થાય છે, જેથી કુદરતી સુગંધ જળવાઈ રહે.",
+    },
     image: `${PLACEHOLDER}/process-3.svg`, // TODO: replace
   },
   {
     icon: "droplet",
     title: { en: "Filtration", hi: "छनाई", gu: "ગાળણ" },
     description: {
-      en: "The oil settles naturally and passes through cloth filters to remove fine sediment.",
-      hi: "तेल को प्राकृतिक रूप से थिरने दिया जाता है और कपड़े के फ़िल्टर से छानकर बारीक तलछट हटाई जाती है।",
-      gu: "તેલને કુદરતી રીતે ઠરવા દેવાય છે અને કાપડના ફિલ્ટરથી ગાળીને ઝીણો કચરો દૂર કરાય છે.",
-    }, // TODO: replace
+      en: "Oil is settled and filtered to remove fine sediment, for a clear, clean pour.",
+      hi: "तेल को थिरने देकर छाना जाता है ताकि बारीक तलछट हटे और तेल साफ़ रहे।",
+      gu: "તેલને ઠરવા દઈને ગાળવામાં આવે છે જેથી ઝીણો કચરો દૂર થાય અને તેલ ચોખ્ખું રહે.",
+    },
     image: `${PLACEHOLDER}/process-4.svg`, // TODO: replace
   },
   {
     icon: "package",
     title: { en: "Packing", hi: "पैकिंग", gu: "પેકિંગ" },
     description: {
-      en: "Oil is filled into food-grade bottles, jars and tins on a hygienic line and sealed against tampering.",
-      hi: "तेल को स्वच्छ लाइन पर फ़ूड-ग्रेड बोतलों, जार और टिन में भरकर सील किया जाता है।",
-      gu: "તેલને સ્વચ્છ લાઇન પર ફૂડ-ગ્રેડ બોટલ, જાર અને ડબ્બામાં ભરીને સીલ કરવામાં આવે છે.",
-    }, // TODO: replace
+      en: "Filled into 1 L bottles, 5 L cans and 15 L or 15 kg tins on a hygienic line, then sealed.",
+      hi: "स्वच्छ लाइन पर 1 लीटर बोतल, 5 लीटर कैन और 15 लीटर या 15 किलो टिन में भरकर सील किया जाता है।",
+      gu: "સ્વચ્છ લાઇન પર 1 લિટર બોટલ, 5 લિટર કેન અને 15 લિટર કે 15 કિલો ડબ્બામાં ભરીને સીલ કરવામાં આવે છે.",
+    },
     image: `${PLACEHOLDER}/process-5.svg`, // TODO: replace
   },
   {
     icon: "flask",
     title: { en: "Quality Check", hi: "गुणवत्ता जाँच", gu: "ગુણવત્તા ચકાસણી" },
     description: {
-      en: "Every batch is tested for purity, moisture and acidity before dispatch, and samples are retained.",
-      hi: "हर बैच की शुद्धता, नमी और अम्लता की जाँच डिस्पैच से पहले होती है, और नमूने सुरक्षित रखे जाते हैं।",
-      gu: "દરેક બેચની શુદ્ધતા, ભેજ અને એસિડિટીની ચકાસણી ડિસ્પેચ પહેલાં થાય છે, અને નમૂના સાચવી રાખવામાં આવે છે.",
-    }, // TODO: replace
+      en: "Every batch is checked for purity, moisture and acidity before dispatch.",
+      hi: "हर बैच की शुद्धता, नमी और अम्लता की जाँच डिस्पैच से पहले होती है।",
+      gu: "દરેક બેચની શુદ્ધતા, ભેજ અને એસિડિટીની ચકાસણી ડિસ્પેચ પહેલાં થાય છે.",
+    },
     image: `${PLACEHOLDER}/process-6.svg`, // TODO: replace
   },
 ];
@@ -625,124 +666,49 @@ export const processSteps: ProcessStep[] = [
 export const about = {
   story: {
     en: [
-      "Placeholder story, paragraph one. Describe how the business started, who started it and why groundnut oil.",
-      "Placeholder story, paragraph two. Describe how the business has grown and what has stayed the same.",
+      "TATTVA FRESH is the edible oil brand of Shree Ram Food Corporate, started in 2026 in Rajkot, at the centre of Gujarat's groundnut and oil trade.",
+      "Tattva means essence. We started with a simple idea: pack honest, pure oil, the way families and kitchens in Saurashtra have always expected it to be, and deliver it reliably to homes, dealers and businesses.",
     ],
     hi: [
-      "प्लेसहोल्डर कहानी, पहला अनुच्छेद। बताइए कि व्यवसाय कैसे शुरू हुआ, किसने शुरू किया और मूंगफली तेल ही क्यों।",
-      "प्लेसहोल्डर कहानी, दूसरा अनुच्छेद। बताइए कि व्यवसाय कैसे बढ़ा और क्या आज भी वैसा ही है।",
+      "तत्त्व फ्रेश, श्री राम फ़ूड कॉर्पोरेट का खाद्य तेल ब्रांड है, जिसकी शुरुआत 2026 में राजकोट में हुई, जो गुजरात के मूंगफली और तेल व्यापार का केंद्र है।",
+      "तत्त्व का अर्थ है सार। हमारी शुरुआत एक सीधे विचार से हुई: ईमानदार, शुद्ध तेल पैक करना, वैसा ही जैसा सौराष्ट्र के परिवार और रसोई हमेशा से चाहते आए हैं, और उसे घरों, डीलरों और व्यवसायों तक भरोसे से पहुँचाना।",
     ],
     gu: [
-      "પ્લેસહોલ્ડર વાર્તા, પહેલો ફકરો. જણાવો કે વ્યવસાય કેવી રીતે શરૂ થયો, કોણે શરૂ કર્યો અને સીંગતેલ જ કેમ.",
-      "પ્લેસહોલ્ડર વાર્તા, બીજો ફકરો. જણાવો કે વ્યવસાય કેવી રીતે વધ્યો અને આજે પણ શું એવું ને એવું છે.",
+      "તત્ત્વ ફ્રેશ એ શ્રી રામ ફૂડ કોર્પોરેટની ખાદ્યતેલ બ્રાન્ડ છે, જેની શરૂઆત 2026 માં રાજકોટમાં થઈ, જે ગુજરાતના સીંગ અને તેલ વેપારનું કેન્દ્ર છે.",
+      "તત્ત્વ એટલે સાર. અમારી શરૂઆત એક સીધા વિચારથી થઈ: પ્રામાણિક, શુદ્ધ તેલ પેક કરવું, એવું જ જેવું સૌરાષ્ટ્રના પરિવારો અને રસોડાં હંમેશાં અપેક્ષા રાખતાં આવ્યાં છે, અને તેને ઘર, ડીલરો અને વ્યવસાયો સુધી ભરોસાથી પહોંચાડવું.",
     ],
-  } as Localized<string[]>, // TODO: replace
+  } as Localized<string[]>,
   storyImage: `${PLACEHOLDER}/about-story.svg`, // TODO: replace
   mission: {
-    en: "Placeholder mission: to bring pure, honestly made groundnut oil to every kitchen.",
-    hi: "प्लेसहोल्डर मिशन: हर रसोई तक शुद्ध और ईमानदारी से बना मूंगफली तेल पहुँचाना।",
-    gu: "પ્લેસહોલ્ડર મિશન: દરેક રસોડા સુધી શુદ્ધ અને પ્રામાણિકતાથી બનેલું સીંગતેલ પહોંચાડવું.",
-  } as Localized<string>, // TODO: replace
+    en: "To bring pure, honestly packed edible oil to every kitchen we serve, at a fair price.",
+    hi: "हर रसोई तक शुद्ध और ईमानदारी से पैक किया गया खाद्य तेल, उचित दाम पर पहुँचाना।",
+    gu: "દરેક રસોડા સુધી શુદ્ધ અને પ્રામાણિકતાથી પેક કરેલું ખાદ્યતેલ, વાજબી ભાવે પહોંચાડવું.",
+  } as Localized<string>,
   vision: {
-    en: "Placeholder vision: to be the most trusted groundnut oil brand in our region.",
-    hi: "प्लेसहोल्डर विज़न: अपने क्षेत्र का सबसे भरोसेमंद मूंगफली तेल ब्रांड बनना।",
-    gu: "પ્લેસહોલ્ડર વિઝન: અમારા પ્રદેશની સૌથી ભરોસાપાત્ર સીંગતેલ બ્રાન્ડ બનવું.",
-  } as Localized<string>, // TODO: replace
+    en: "To grow from Gujarat into a trusted edible oil name across India.",
+    hi: "गुजरात से आगे बढ़कर पूरे भारत में एक भरोसेमंद खाद्य तेल नाम बनना।",
+    gu: "ગુજરાતથી આગળ વધીને સમગ્ર ભારતમાં ભરોસાપાત્ર ખાદ્યતેલ નામ બનવું.",
+  } as Localized<string>,
   factory: {
     description: {
-      en: "Placeholder factory description. Describe the plant, its capacity, hygiene practices and location.",
-      hi: "प्लेसहोल्डर फ़ैक्टरी विवरण। प्लांट, उसकी क्षमता, स्वच्छता और स्थान के बारे में बताइए।",
-      gu: "પ્લેસહોલ્ડર ફેક્ટરી વર્ણન. પ્લાન્ટ, તેની ક્ષમતા, સ્વચ્છતા અને સ્થળ વિશે જણાવો.",
-    } as Localized<string>, // TODO: replace
+      en: "Our unit is at Sokhada, near Rajkot, with a capacity of 2,000 litres a day. Oil is filtered, packed and sealed on site, and every batch is checked before it leaves.",
+      hi: "हमारी यूनिट राजकोट के पास सोखडा में है, जिसकी क्षमता रोज़ 2,000 लीटर है। तेल की छनाई, पैकिंग और सीलिंग यहीं होती है, और हर बैच निकलने से पहले जाँचा जाता है।",
+      gu: "અમારું યુનિટ રાજકોટ પાસે સોખડામાં છે, જેની ક્ષમતા રોજના 2,000 લિટર છે. તેલનું ગાળણ, પેકિંગ અને સીલિંગ અહીં જ થાય છે, અને દરેક બેચ નીકળતા પહેલાં ચકાસવામાં આવે છે.",
+    } as Localized<string>,
     highlights: {
-      en: ["In-house pressing and packing", "Food-grade storage tanks", "On-site testing lab"],
-      hi: ["अपनी पेराई और पैकिंग", "फ़ूड-ग्रेड भंडारण टैंक", "फ़ैक्टरी में ही जाँच प्रयोगशाला"],
-      gu: ["પોતાનું પીલાણ અને પેકિંગ", "ફૂડ-ગ્રેડ સંગ્રહ ટાંકીઓ", "ફેક્ટરીમાં જ ચકાસણી લેબ"],
-    } as Localized<string[]>, // TODO: replace
+      en: ["2,000 litres daily capacity", "1 L bottles to 15 kg tins", "Pan-India dispatch"],
+      hi: ["रोज़ 2,000 लीटर की क्षमता", "1 लीटर बोतल से 15 किलो टिन तक", "पूरे भारत में डिस्पैच"],
+      gu: ["રોજની 2,000 લિટર ક્ષમતા", "1 લિટર બોટલથી 15 કિલો ડબ્બા સુધી", "સમગ્ર ભારતમાં ડિસ્પેચ"],
+    } as Localized<string[]>,
     image: `${PLACEHOLDER}/factory.svg`, // TODO: replace
   },
 };
 
-export const team: TeamMember[] = [
-  {
-    name: { en: "Founder Name One", hi: "संस्थापक नाम एक", gu: "સ્થાપક નામ એક" }, // TODO: replace
-    role: { en: "Founder", hi: "संस्थापक", gu: "સ્થાપક" }, // TODO: replace
-    bio: {
-      en: "Placeholder bio. A line or two about experience and role in the business.",
-      hi: "प्लेसहोल्डर परिचय। अनुभव और व्यवसाय में भूमिका के बारे में एक-दो पंक्तियाँ।",
-      gu: "પ્લેસહોલ્ડર પરિચય. અનુભવ અને વ્યવસાયમાં ભૂમિકા વિશે એક-બે લીટી.",
-    }, // TODO: replace
-    image: `${PLACEHOLDER}/team-1.svg`, // TODO: replace
-  },
-  {
-    name: { en: "Founder Name Two", hi: "संस्थापक नाम दो", gu: "સ્થાપક નામ બે" }, // TODO: replace
-    role: { en: "Director, Operations", hi: "निदेशक, संचालन", gu: "ડિરેક્ટર, સંચાલન" }, // TODO: replace
-    bio: {
-      en: "Placeholder bio. A line or two about experience and role in the business.",
-      hi: "प्लेसहोल्डर परिचय। अनुभव और व्यवसाय में भूमिका के बारे में एक-दो पंक्तियाँ।",
-      gu: "પ્લેસહોલ્ડર પરિચય. અનુભવ અને વ્યવસાયમાં ભૂમિકા વિશે એક-બે લીટી.",
-    }, // TODO: replace
-    image: `${PLACEHOLDER}/team-2.svg`, // TODO: replace
-  },
-  {
-    name: { en: "Founder Name Three", hi: "संस्थापक नाम तीन", gu: "સ્થાપક નામ ત્રણ" }, // TODO: replace
-    role: { en: "Director, Sales", hi: "निदेशक, बिक्री", gu: "ડિરેક્ટર, વેચાણ" }, // TODO: replace
-    bio: {
-      en: "Placeholder bio. A line or two about experience and role in the business.",
-      hi: "प्लेसहोल्डर परिचय। अनुभव और व्यवसाय में भूमिका के बारे में एक-दो पंक्तियाँ।",
-      gu: "પ્લેસહોલ્ડર પરિચય. અનુભવ અને વ્યવસાયમાં ભૂમિકા વિશે એક-બે લીટી.",
-    }, // TODO: replace
-    image: `${PLACEHOLDER}/team-3.svg`, // TODO: replace
-  },
-];
+/** Founders shown on the About page. The section is hidden while this is empty. */
+export const team: TeamMember[] = []; // TODO: add founders
 
-export const timeline: Milestone[] = [
-  {
-    year: "2000", // TODO: replace
-    title: { en: "The first ghani", hi: "पहली घानी", gu: "પહેલી ઘાણી" },
-    description: {
-      en: "Placeholder milestone: the business starts with a single oil press.",
-      hi: "प्लेसहोल्डर पड़ाव: व्यवसाय एक घानी से शुरू हुआ।",
-      gu: "પ્લેસહોલ્ડર સીમાચિહ્ન: વ્યવસાય એક ઘાણીથી શરૂ થયો.",
-    },
-  },
-  {
-    year: "2005", // TODO: replace
-    title: { en: "Our own brand", hi: "अपना ब्रांड", gu: "પોતાની બ્રાન્ડ" },
-    description: {
-      en: "Placeholder milestone: packaged oil launched under our own brand name.",
-      hi: "प्लेसहोल्डर पड़ाव: अपने ब्रांड नाम से पैक्ड तेल की शुरुआत।",
-      gu: "પ્લેસહોલ્ડર સીમાચિહ્ન: પોતાના બ્રાન્ડ નામથી પેક્ડ તેલની શરૂઆત.",
-    },
-  },
-  {
-    year: "2012", // TODO: replace
-    title: { en: "New factory", hi: "नई फ़ैक्टरी", gu: "નવી ફેક્ટરી" },
-    description: {
-      en: "Placeholder milestone: moved to a larger plant with a modern packing line.",
-      hi: "प्लेसहोल्डर पड़ाव: आधुनिक पैकिंग लाइन वाले बड़े प्लांट में स्थानांतरण।",
-      gu: "પ્લેસહોલ્ડર સીમાચિહ્ન: આધુનિક પેકિંગ લાઇનવાળા મોટા પ્લાન્ટમાં સ્થળાંતર.",
-    },
-  },
-  {
-    year: "2018", // TODO: replace
-    title: { en: "Certifications", hi: "प्रमाणपत्र", gu: "પ્રમાણપત્રો" },
-    description: {
-      en: "Placeholder milestone: quality certifications received and in-house lab set up.",
-      hi: "प्लेसहोल्डर पड़ाव: गुणवत्ता प्रमाणपत्र मिले और अपनी प्रयोगशाला स्थापित हुई।",
-      gu: "પ્લેસહોલ્ડર સીમાચિહ્ન: ગુણવત્તા પ્રમાણપત્રો મળ્યાં અને પોતાની લેબ સ્થપાઈ.",
-    },
-  },
-  {
-    year: "2024", // TODO: replace
-    title: { en: "Growing network", hi: "बढ़ता नेटवर्क", gu: "વધતું નેટવર્ક" },
-    description: {
-      en: "Placeholder milestone: dealer network expanded across several states.",
-      hi: "प्लेसहोल्डर पड़ाव: डीलर नेटवर्क कई राज्यों तक फैला।",
-      gu: "પ્લેસહોલ્ડર સીમાચિહ્ન: ડીલર નેટવર્ક અનેક રાજ્યો સુધી વિસ્તર્યું.",
-    },
-  },
-];
+/** Milestones shown on the About page. The section is hidden while this is empty. */
+export const timeline: Milestone[] = [];
 
 /* ============================================================================
  * 7. QUALITY PAGE
@@ -750,10 +716,10 @@ export const timeline: Milestone[] = [
 
 export const quality = {
   intro: {
-    en: "Quality is checked at three points: when seed arrives, while oil is pressed, and before every batch is dispatched.",
-    hi: "गुणवत्ता की जाँच तीन जगह होती है: जब बीज आता है, जब तेल निकलता है, और हर बैच के डिस्पैच से पहले।",
-    gu: "ગુણવત્તાની ચકાસણી ત્રણ તબક્કે થાય છે: દાણા આવે ત્યારે, તેલ પીલાય ત્યારે, અને દરેક બેચના ડિસ્પેચ પહેલાં.",
-  } as Localized<string>, // TODO: replace
+    en: "Quality is checked at three points: when raw material arrives, during pressing and filtration, and before every batch is dispatched.",
+    hi: "गुणवत्ता की जाँच तीन जगह होती है: जब कच्चा माल आता है, पेराई और छनाई के दौरान, और हर बैच के डिस्पैच से पहले।",
+    gu: "ગુણવત્તાની ચકાસણી ત્રણ તબક્કે થાય છે: કાચો માલ આવે ત્યારે, પીલાણ અને ગાળણ દરમિયાન, અને દરેક બેચના ડિસ્પેચ પહેલાં.",
+  } as Localized<string>,
   fssaiInfo: {
     en: "We are licensed by the Food Safety and Standards Authority of India (FSSAI). The licence number is printed on every pack and can be verified on the FSSAI FoSCoS portal.",
     hi: "हम भारतीय खाद्य सुरक्षा और मानक प्राधिकरण (FSSAI) से लाइसेंस प्राप्त हैं। लाइसेंस नंबर हर पैक पर छपा होता है और FSSAI के FoSCoS पोर्टल पर जाँचा जा सकता है।",
@@ -789,11 +755,11 @@ export const quality = {
     },
     {
       icon: "badge",
-      title: { en: "Aflatoxin screening", hi: "एफ़्लाटॉक्सिन जाँच", gu: "અફલાટોક્સિન ચકાસણી" },
+      title: { en: "Peroxide value", hi: "पेरॉक्साइड मान", gu: "પેરોક્સાઇડ મૂલ્ય" },
       description: {
-        en: "Seed lots are screened so that only safe groundnuts are pressed.",
-        hi: "बीज के लॉट की जाँच होती है ताकि केवल सुरक्षित मूंगफली की ही पेराई हो।",
-        gu: "દાણાના લોટની ચકાસણી થાય છે જેથી ફક્ત સલામત સીંગ જ પીલાય.",
+        en: "Confirms the oil has not oxidised, so it tastes and smells fresh.",
+        hi: "पुष्टि करता है कि तेल ऑक्सीकृत नहीं हुआ है, ताकि स्वाद और ख़ुशबू ताज़ा रहे।",
+        gu: "ખાતરી કરે છે કે તેલ ઓક્સિડાઇઝ થયું નથી, જેથી સ્વાદ અને સુગંધ તાજાં રહે.",
       },
     },
   ] as Feature[], // TODO: replace
@@ -896,40 +862,40 @@ export const faqs: Faq[] = [
   {
     category: "products",
     question: {
-      en: "What is the difference between cold-pressed, filtered and refined groundnut oil?",
-      hi: "कोल्ड-प्रेस्ड, फ़िल्टर्ड और रिफ़ाइंड मूंगफली तेल में क्या अंतर है?",
-      gu: "કોલ્ડ-પ્રેસ્ડ, ફિલ્ટર્ડ અને રિફાઇન્ડ સીંગતેલમાં શું ફરક છે?",
+      en: "Which oils do you make?",
+      hi: "आप कौन-कौन से तेल बनाते हैं?",
+      gu: "તમે કયાં કયાં તેલ બનાવો છો?",
     },
     answer: {
-      en: "Cold-pressed oil is extracted slowly at low temperature and only filtered, so it keeps the most aroma and nutrients. Filtered oil is expeller-pressed and filtered without chemical refining. Refined oil is processed further for a neutral taste, lighter colour and longer shelf life.",
-      hi: "कोल्ड-प्रेस्ड तेल कम तापमान पर धीरे-धीरे निकाला जाता है और सिर्फ़ छाना जाता है, इसलिए इसमें सुगंध और पोषक तत्व सबसे ज़्यादा रहते हैं। फ़िल्टर्ड तेल एक्सपेलर से निकालकर बिना रासायनिक रिफ़ाइनिंग के छाना जाता है। रिफ़ाइंड तेल को आगे प्रोसेस किया जाता है, जिससे स्वाद सादा, रंग हल्का और शेल्फ़ लाइफ़ लंबी होती है।",
-      gu: "કોલ્ડ-પ્રેસ્ડ તેલ ઓછા તાપમાને ધીમે ધીમે કાઢવામાં આવે છે અને ફક્ત ગાળવામાં આવે છે, તેથી તેમાં સુગંધ અને પોષક તત્ત્વો સૌથી વધુ રહે છે. ફિલ્ટર્ડ તેલ એક્સપેલરથી પીલીને રાસાયણિક રિફાઇનિંગ વગર ગાળવામાં આવે છે. રિફાઇન્ડ તેલને આગળ પ્રોસેસ કરવામાં આવે છે, જેથી સ્વાદ સાદો, રંગ આછો અને શેલ્ફ લાઇફ લાંબી થાય છે.",
+      en: "We offer five edible oils: filtered groundnut oil, refined cottonseed oil, refined sunflower oil, corn oil and palm oil.",
+      hi: "हम पाँच खाद्य तेल देते हैं: फ़िल्टर्ड मूंगफली तेल, रिफ़ाइंड बिनौला तेल, रिफ़ाइंड सूरजमुखी तेल, मक्के का तेल और पाम तेल।",
+      gu: "અમે પાંચ ખાદ્યતેલ આપીએ છીએ: ફિલ્ટર્ડ સીંગતેલ, રિફાઇન્ડ કપાસિયા તેલ, રિફાઇન્ડ સૂરજમુખી તેલ, મકાઈનું તેલ અને પામ તેલ.",
     },
   },
   {
     category: "products",
     question: {
-      en: "Is your groundnut oil 100% pure?",
-      hi: "क्या आपका मूंगफली तेल 100% शुद्ध है?",
-      gu: "શું તમારું સીંગતેલ 100% શુદ્ધ છે?",
+      en: "What is the difference between filtered and refined oil?",
+      hi: "फ़िल्टर्ड और रिफ़ाइंड तेल में क्या अंतर है?",
+      gu: "ફિલ્ટર્ડ અને રિફાઇન્ડ તેલમાં શું ફરક છે?",
     },
     answer: {
-      en: "Yes. Every pack contains only groundnut oil. We do not blend it with any other oil, and each batch is tested for adulteration.",
-      hi: "हाँ। हर पैक में सिर्फ़ मूंगफली का तेल होता है। हम इसमें कोई दूसरा तेल नहीं मिलाते, और हर बैच की मिलावट के लिए जाँच होती है।",
-      gu: "હા. દરેક પેકમાં ફક્ત સીંગતેલ હોય છે. અમે તેમાં બીજું કોઈ તેલ ભેળવતા નથી, અને દરેક બેચની ભેળસેળ માટે ચકાસણી થાય છે.",
+      en: "Filtered oil is pressed and filtered without chemical refining, so it keeps its natural aroma and colour. Refined oil is processed further for a neutral taste, lighter colour and longer shelf life.",
+      hi: "फ़िल्टर्ड तेल को निकालकर बिना रासायनिक रिफ़ाइनिंग के छाना जाता है, इसलिए उसकी प्राकृतिक सुगंध और रंग बने रहते हैं। रिफ़ाइंड तेल को आगे प्रोसेस किया जाता है, जिससे स्वाद सादा, रंग हल्का और शेल्फ़ लाइफ़ लंबी होती है।",
+      gu: "ફિલ્ટર્ડ તેલને પીલીને રાસાયણિક રિફાઇનિંગ વગર ગાળવામાં આવે છે, તેથી તેની કુદરતી સુગંધ અને રંગ જળવાઈ રહે છે. રિફાઇન્ડ તેલને આગળ પ્રોસેસ કરવામાં આવે છે, જેથી સ્વાદ સાદો, રંગ આછો અને શેલ્ફ લાઇફ લાંબી થાય છે.",
     },
   },
   {
     category: "products",
     question: {
-      en: "Why does cold-pressed oil look cloudy or have sediment at the bottom?",
-      hi: "कोल्ड-प्रेस्ड तेल धुंधला क्यों दिखता है या नीचे तलछट क्यों होती है?",
-      gu: "કોલ્ડ-પ્રેસ્ડ તેલ ધૂંધળું કેમ દેખાય છે અથવા નીચે કચરો કેમ બેસે છે?",
+      en: "Are your oils pure?",
+      hi: "क्या आपके तेल शुद्ध हैं?",
+      gu: "શું તમારાં તેલ શુદ્ધ છે?",
     },
     answer: {
-      en: "Cold-pressed oil is not chemically refined, so fine groundnut particles can settle over time. This is natural and safe. In cold weather the oil may also thicken and will clear again at room temperature.",
-      hi: "कोल्ड-प्रेस्ड तेल रासायनिक रूप से रिफ़ाइन नहीं होता, इसलिए मूंगफली के बारीक कण समय के साथ नीचे बैठ सकते हैं। यह प्राकृतिक और सुरक्षित है। ठंड में तेल गाढ़ा भी हो सकता है और सामान्य तापमान पर फिर साफ़ हो जाता है।",
-      gu: "કોલ્ડ-પ્રેસ્ડ તેલ રાસાયણિક રીતે રિફાઇન થતું નથી, તેથી સીંગના ઝીણા કણ સમય જતાં નીચે બેસી શકે છે. આ કુદરતી અને સલામત છે. ઠંડીમાં તેલ ઘટ્ટ પણ થઈ શકે છે અને સામાન્ય તાપમાને ફરી ચોખ્ખું થઈ જાય છે.",
+      en: "Yes. Each pack contains only the oil named on it. We do not blend oils, and every batch is checked before dispatch.",
+      hi: "हाँ। हर पैक में सिर्फ़ वही तेल होता है जिसका नाम उस पर लिखा है। हम तेलों को मिलाते नहीं, और हर बैच की डिस्पैच से पहले जाँच होती है।",
+      gu: "હા. દરેક પેકમાં ફક્ત એ જ તેલ હોય છે જેનું નામ તેના પર લખ્યું છે. અમે તેલ ભેળવતા નથી, અને દરેક બેચની ડિસ્પેચ પહેલાં ચકાસણી થાય છે.",
     },
   },
   {
@@ -940,35 +906,35 @@ export const faqs: Faq[] = [
       gu: "કયા કયા પેક સાઇઝ ઉપલબ્ધ છે?",
     },
     answer: {
-      en: "Our oils come in 500 ml and 1 L bottles, 5 L jars, 15 L and 15 kg tins, and bulk supply. Availability varies by product, so please check the product page.",
-      hi: "हमारे तेल 500 मि.ली. और 1 लीटर की बोतल, 5 लीटर के जार, 15 लीटर और 15 किलो के टिन, तथा थोक में उपलब्ध हैं। उपलब्धता उत्पाद के अनुसार अलग हो सकती है, कृपया उत्पाद का पेज देखें।",
-      gu: "અમારાં તેલ 500 મિ.લિ. અને 1 લિટરની બોટલ, 5 લિટરના જાર, 15 લિટર અને 15 કિલોના ડબ્બા, તથા જથ્થાબંધ ઉપલબ્ધ છે. ઉપલબ્ધતા ઉત્પાદન પ્રમાણે જુદી હોઈ શકે છે, કૃપા કરીને ઉત્પાદનનું પેજ જુઓ.",
+      en: "Every oil comes in 1 L bottles, 5 L cans, 15 L tins and 15 kg tins.",
+      hi: "हर तेल 1 लीटर बोतल, 5 लीटर कैन, 15 लीटर टिन और 15 किलो टिन में उपलब्ध है।",
+      gu: "દરેક તેલ 1 લિટર બોટલ, 5 લિટર કેન, 15 લિટર ડબ્બા અને 15 કિલો ડબ્બામાં ઉપલબ્ધ છે.",
     },
   },
   {
     category: "health",
     question: {
-      en: "Is groundnut oil good for everyday cooking?",
-      hi: "क्या मूंगफली तेल रोज़ के खाने के लिए अच्छा है?",
-      gu: "શું સીંગતેલ રોજની રસોઈ માટે સારું છે?",
+      en: "Which oil should I choose?",
+      hi: "मुझे कौन-सा तेल चुनना चाहिए?",
+      gu: "મારે કયું તેલ પસંદ કરવું?",
     },
     answer: {
-      en: "Groundnut oil is rich in monounsaturated fat and vitamin E, and is naturally free of cholesterol and trans fat. Like any oil, it is best used in moderation as part of a balanced diet.",
-      hi: "मूंगफली तेल में मोनोअनसैचुरेटेड वसा और विटामिन ई भरपूर होता है, और इसमें प्राकृतिक रूप से कोलेस्ट्रॉल और ट्रांस वसा नहीं होती। किसी भी तेल की तरह, इसे संतुलित आहार के हिस्से के रूप में सीमित मात्रा में इस्तेमाल करना बेहतर है।",
-      gu: "સીંગતેલમાં મોનોઅનસેચ્યુરેટેડ ચરબી અને વિટામિન ઈ ભરપૂર હોય છે, અને તેમાં કુદરતી રીતે કોલેસ્ટ્રોલ અને ટ્રાન્સ ચરબી હોતી નથી. કોઈ પણ તેલની જેમ, તેને સંતુલિત આહારના ભાગ રૂપે માપસર વાપરવું સારું છે.",
+      en: "Groundnut oil suits traditional Gujarati cooking and farsan. Sunflower and corn oil are light choices for everyday meals. Cottonseed oil is popular for sweets and namkeen, and palm oil is mostly used for commercial frying.",
+      hi: "मूंगफली तेल पारंपरिक गुजराती खाने और नमकीन के लिए अच्छा है। सूरजमुखी और मक्के का तेल रोज़ के खाने के लिए हल्के विकल्प हैं। बिनौला तेल मिठाई और नमकीन के लिए लोकप्रिय है, और पाम तेल ज़्यादातर व्यावसायिक तलने में इस्तेमाल होता है।",
+      gu: "સીંગતેલ પરંપરાગત ગુજરાતી રસોઈ અને ફરસાણ માટે સારું છે. સૂરજમુખી અને મકાઈનું તેલ રોજના ભોજન માટે હળવા વિકલ્પ છે. કપાસિયા તેલ મીઠાઈ અને નમકીન માટે લોકપ્રિય છે, અને પામ તેલ મોટે ભાગે વ્યાવસાયિક તળણમાં વપરાય છે.",
     },
   },
   {
     category: "health",
     question: {
-      en: "Can I use groundnut oil for deep frying?",
-      hi: "क्या मूंगफली तेल डीप फ्राई के लिए इस्तेमाल कर सकते हैं?",
-      gu: "શું સીંગતેલ તળવા માટે વાપરી શકાય?",
+      en: "Can I use these oils for deep frying?",
+      hi: "क्या ये तेल डीप फ्राई के लिए इस्तेमाल कर सकते हैं?",
+      gu: "શું આ તેલ તળવા માટે વાપરી શકાય?",
     },
     answer: {
-      en: "Yes. Groundnut oil has a high smoke point, which makes it well suited to frying. Refined and filtered oils are the usual choice for deep frying, and cold-pressed oil for everyday cooking and tadka.",
-      hi: "हाँ। मूंगफली तेल का स्मोक पॉइंट ऊँचा होता है, इसलिए यह तलने के लिए उपयुक्त है। डीप फ्राई के लिए आम तौर पर रिफ़ाइंड और फ़िल्टर्ड तेल, और रोज़ के खाने व तड़के के लिए कोल्ड-प्रेस्ड तेल चुना जाता है।",
-      gu: "હા. સીંગતેલનો સ્મોક પોઇન્ટ ઊંચો હોય છે, તેથી તે તળવા માટે યોગ્ય છે. તળવા માટે સામાન્ય રીતે રિફાઇન્ડ અને ફિલ્ટર્ડ તેલ, અને રોજની રસોઈ તથા વઘાર માટે કોલ્ડ-પ્રેસ્ડ તેલ પસંદ કરાય છે.",
+      en: "Yes. All five oils have a high smoke point and are suited to frying. For long, high-heat frying in commercial kitchens, cottonseed and palm oil are the usual choice.",
+      hi: "हाँ। पाँचों तेलों का स्मोक पॉइंट ऊँचा है और ये तलने के लिए उपयुक्त हैं। व्यावसायिक रसोई में लंबे समय तक तेज़ आँच पर तलने के लिए आम तौर पर बिनौला और पाम तेल चुना जाता है।",
+      gu: "હા. પાંચેય તેલનો સ્મોક પોઇન્ટ ઊંચો છે અને તે તળવા માટે યોગ્ય છે. વ્યાવસાયિક રસોડામાં લાંબો સમય ઊંચા તાપે તળવા માટે સામાન્ય રીતે કપાસિયા અને પામ તેલ પસંદ કરાય છે.",
     },
   },
   {
@@ -992,9 +958,9 @@ export const faqs: Faq[] = [
       gu: "જથ્થાબંધ ઓર્ડર માટે લઘુત્તમ જથ્થો કેટલો છે?",
     },
     answer: {
-      en: "The minimum depends on the product and pack size. Send us an enquiry from the Bulk Orders page and our sales team will share the current quantities and rates.",
-      hi: "न्यूनतम मात्रा उत्पाद और पैक साइज़ पर निर्भर करती है। थोक ऑर्डर पेज से हमें पूछताछ भेजें, हमारी सेल्स टीम मौजूदा मात्रा और दरें बताएगी।",
-      gu: "લઘુત્તમ જથ્થો ઉત્પાદન અને પેક સાઇઝ પર આધાર રાખે છે. જથ્થાબંધ ઓર્ડર પેજ પરથી અમને પૂછપરછ મોકલો, અમારી સેલ્સ ટીમ હાલનો જથ્થો અને ભાવ જણાવશે.",
+      en: "The minimum bulk order is 50 tins of 15 L or 15 kg. Pricing is shared on request: send an enquiry from the Bulk Orders page or message us on WhatsApp.",
+      hi: "थोक ऑर्डर की न्यूनतम मात्रा 15 लीटर या 15 किलो के 50 टिन है। दाम पूछताछ पर बताए जाते हैं: थोक ऑर्डर पेज से पूछताछ भेजें या व्हाट्सऐप पर संदेश करें।",
+      gu: "જથ્થાબંધ ઓર્ડરનો લઘુત્તમ જથ્થો 15 લિટર કે 15 કિલોના 50 ડબ્બા છે. ભાવ પૂછપરછ પર જણાવાય છે: જથ્થાબંધ ઓર્ડર પેજ પરથી પૂછપરછ મોકલો અથવા વોટ્સએપ પર સંદેશ કરો.",
     },
   },
   {
@@ -1005,9 +971,9 @@ export const faqs: Faq[] = [
       gu: "શું તમે સમગ્ર ભારતમાં ડિલિવરી કરો છો?",
     },
     answer: {
-      en: "Yes, we dispatch bulk orders across India through transport partners. Delivery time and freight depend on your location and order size.",
-      hi: "हाँ, हम ट्रांसपोर्ट पार्टनर के ज़रिए पूरे भारत में थोक ऑर्डर भेजते हैं। डिलीवरी का समय और भाड़ा आपके स्थान और ऑर्डर की मात्रा पर निर्भर करता है।",
-      gu: "હા, અમે ટ્રાન્સપોર્ટ પાર્ટનર દ્વારા સમગ્ર ભારતમાં જથ્થાબંધ ઓર્ડર મોકલીએ છીએ. ડિલિવરીનો સમય અને ભાડું તમારા સ્થળ અને ઓર્ડરના જથ્થા પર આધાર રાખે છે.",
+      en: "Yes, we deliver bulk orders across India. Delivery time and freight depend on your location and order size.",
+      hi: "हाँ, हम पूरे भारत में थोक ऑर्डर पहुँचाते हैं। डिलीवरी का समय और भाड़ा आपके स्थान और ऑर्डर की मात्रा पर निर्भर करता है।",
+      gu: "હા, અમે સમગ્ર ભારતમાં જથ્થાબંધ ઓર્ડર પહોંચાડીએ છીએ. ડિલિવરીનો સમય અને ભાડું તમારા સ્થળ અને ઓર્ડરના જથ્થા પર આધાર રાખે છે.",
     },
   },
   {
@@ -1018,83 +984,19 @@ export const faqs: Faq[] = [
       gu: "હું ડિસ્ટ્રિબ્યુટર કે ડીલર કેવી રીતે બની શકું?",
     },
     answer: {
-      en: "Fill in the form on the Become a Distributor page with your firm and area details. Our team will contact you to discuss terms and availability in your territory.",
-      hi: "डिस्ट्रीब्यूटर बनें पेज पर अपनी फ़र्म और क्षेत्र की जानकारी के साथ फ़ॉर्म भरें। हमारी टीम शर्तों और आपके क्षेत्र में उपलब्धता पर बात करने के लिए आपसे संपर्क करेगी।",
-      gu: "ડિસ્ટ્રિબ્યુટર બનો પેજ પર તમારી પેઢી અને વિસ્તારની વિગતો સાથે ફોર્મ ભરો. અમારી ટીમ શરતો અને તમારા વિસ્તારમાં ઉપલબ્ધતા વિશે વાત કરવા તમારો સંપર્ક કરશે.",
+      en: "Fill in the form on the Become a Distributor page with your firm and area details. Our team will contact you to discuss terms for your territory.",
+      hi: "डिस्ट्रीब्यूटर बनें पेज पर अपनी फ़र्म और क्षेत्र की जानकारी के साथ फ़ॉर्म भरें। हमारी टीम आपके क्षेत्र की शर्तों पर बात करने के लिए आपसे संपर्क करेगी।",
+      gu: "ડિસ્ટ્રિબ્યુટર બનો પેજ પર તમારી પેઢી અને વિસ્તારની વિગતો સાથે ફોર્મ ભરો. અમારી ટીમ તમારા વિસ્તારની શરતો વિશે વાત કરવા તમારો સંપર્ક કરશે.",
     },
   },
-]; // TODO: replace (review answers against your actual products and policies)
+];
 
 /* ============================================================================
  * 10. TESTIMONIALS
  * ========================================================================== */
 
-export const testimonials: Testimonial[] = [
-  {
-    name: { en: "Customer Name One", hi: "ग्राहक नाम एक", gu: "ગ્રાહક નામ એક" },
-    role: { en: "Home cook, City", hi: "गृहिणी, शहर", gu: "ગૃહિણી, શહેર" },
-    quote: {
-      en: "Placeholder testimonial. The aroma reminds me of the oil we used at my grandmother's home.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। इसकी ख़ुशबू मुझे नानी के घर के तेल की याद दिलाती है।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. આની સુગંધ મને નાનીના ઘરના તેલની યાદ અપાવે છે.",
-    },
-    rating: 5,
-  },
-  {
-    name: { en: "Customer Name Two", hi: "ग्राहक नाम दो", gu: "ગ્રાહક નામ બે" },
-    role: { en: "Restaurant owner, City", hi: "रेस्टोरेंट मालिक, शहर", gu: "રેસ્ટોરન્ટ માલિક, શહેર" },
-    quote: {
-      en: "Placeholder testimonial. Consistent quality in every tin, and dispatch is always on time.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। हर टिन में एक जैसी गुणवत्ता, और डिस्पैच हमेशा समय पर।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. દરેક ડબ્બામાં એકસરખી ગુણવત્તા, અને ડિસ્પેચ હંમેશાં સમયસર.",
-    },
-    rating: 5,
-  },
-  {
-    name: { en: "Customer Name Three", hi: "ग्राहक नाम तीन", gu: "ગ્રાહક નામ ત્રણ" },
-    role: { en: "Distributor, City", hi: "डिस्ट्रीब्यूटर, शहर", gu: "ડિસ્ટ્રિબ્યુટર, શહેર" },
-    quote: {
-      en: "Placeholder testimonial. Customers come back for it, which makes it easy to sell.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। ग्राहक इसे दोबारा माँगते हैं, इसलिए बेचना आसान है।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. ગ્રાહકો ફરી ફરીને માગે છે, તેથી વેચવું સહેલું છે.",
-    },
-    rating: 5,
-  },
-  {
-    name: { en: "Customer Name Four", hi: "ग्राहक नाम चार", gu: "ગ્રાહક નામ ચાર" },
-    role: {
-      en: "Sweet shop owner, City",
-      hi: "मिठाई दुकान मालिक, शहर",
-      gu: "મીઠાઈની દુકાનના માલિક, શહેર",
-    },
-    quote: {
-      en: "Placeholder testimonial. Our farsan tastes better and stays fresh longer with this oil.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। इस तेल से हमारा नमकीन ज़्यादा स्वादिष्ट बनता है और देर तक ताज़ा रहता है।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. આ તેલથી અમારું ફરસાણ વધુ સ્વાદિષ્ટ બને છે અને લાંબો સમય તાજું રહે છે.",
-    },
-    rating: 4,
-  },
-  {
-    name: { en: "Customer Name Five", hi: "ग्राहक नाम पाँच", gu: "ગ્રાહક નામ પાંચ" },
-    role: { en: "Caterer, City", hi: "कैटरर, शहर", gu: "કેટરર, શહેર" },
-    quote: {
-      en: "Placeholder testimonial. We have bought in bulk for years and the rates have always been fair.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। हम बरसों से थोक में ख़रीद रहे हैं और दाम हमेशा वाजिब रहे हैं।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. અમે વર્ષોથી જથ્થાબંધ ખરીદીએ છીએ અને ભાવ હંમેશાં વાજબી રહ્યા છે.",
-    },
-    rating: 5,
-  },
-  {
-    name: { en: "Customer Name Six", hi: "ग्राहक नाम छह", gu: "ગ્રાહક નામ છ" },
-    role: { en: "Home cook, City", hi: "गृहिणी, शहर", gu: "ગૃહિણી, શહેર" },
-    quote: {
-      en: "Placeholder testimonial. My family noticed the difference in taste from the first week.",
-      hi: "प्लेसहोल्डर प्रशंसापत्र। मेरे परिवार को पहले ही हफ़्ते में स्वाद का फ़र्क़ महसूस हुआ।",
-      gu: "પ્લેસહોલ્ડર પ્રતિભાવ. મારા પરિવારને પહેલા જ અઠવાડિયે સ્વાદમાં ફરક લાગ્યો.",
-    },
-    rating: 5,
-  },
-]; // TODO: replace (use real customer testimonials only)
+/** Customer reviews on the home page. The section is hidden while this is empty. */
+export const testimonials: Testimonial[] = []; // TODO: add real customer reviews only
 
 /* ============================================================================
  * 11. FORM OPTIONS
@@ -1122,7 +1024,7 @@ export const investmentRanges: Option[] = [
  * ========================================================================== */
 
 export const legal = {
-  lastUpdated: "2026-01-01", // TODO: replace
+  lastUpdated: "2026-11-17",
   privacy: [
     {
       heading: {
@@ -1205,9 +1107,16 @@ export const legal = {
  * DERIVED HELPERS (no content below this line)
  * ========================================================================== */
 
-/** Site URL without a trailing slash; NEXT_PUBLIC_SITE_URL wins over siteConfig.siteUrl. */
+/**
+ * Site URL without a trailing slash. Order: NEXT_PUBLIC_SITE_URL, then the production
+ * domain Vercel provides (your custom domain once it is added there), then siteConfig.siteUrl.
+ * Share previews and canonical links depend on this pointing at the live site.
+ */
 export function getSiteUrl(): string {
-  return (process.env.NEXT_PUBLIC_SITE_URL || siteConfig.siteUrl).replace(/\/+$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const url =
+    process.env.NEXT_PUBLIC_SITE_URL || (vercel ? `https://${vercel}` : "") || siteConfig.siteUrl;
+  return url.replace(/\/+$/, "");
 }
 
 export function getProduct(slug: string): Product | undefined {

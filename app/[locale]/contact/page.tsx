@@ -24,6 +24,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const tcommon = await getTranslations({ locale, namespace: "common" });
   const link = "text-brown-dark font-medium underline underline-offset-4 hover:text-leaf-dark";
   const iconClass = "text-leaf-dark mt-1 size-6 shrink-0";
+  const sameEmail = siteConfig.emails.info === siteConfig.emails.sales;
 
   return (
     <>
@@ -89,17 +90,19 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
                   {tc("emailTitle")}
                 </h2>
                 <p className="text-stone">
-                  {tc("generalEnquiries")}:{" "}
+                  {sameEmail ? null : <>{tc("generalEnquiries")}: </>}
                   <a href={`mailto:${siteConfig.emails.info}`} className={`${link} break-all`}>
                     {siteConfig.emails.info}
                   </a>
                 </p>
-                <p className="text-stone">
-                  {tc("salesEnquiries")}:{" "}
-                  <a href={`mailto:${siteConfig.emails.sales}`} className={`${link} break-all`}>
-                    {siteConfig.emails.sales}
-                  </a>
-                </p>
+                {!sameEmail && (
+                  <p className="text-stone">
+                    {tc("salesEnquiries")}:{" "}
+                    <a href={`mailto:${siteConfig.emails.sales}`} className={`${link} break-all`}>
+                      {siteConfig.emails.sales}
+                    </a>
+                  </p>
+                )}
               </div>
             </li>
             <li className="card-surface flex gap-4 p-5">
@@ -128,13 +131,25 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
               title={tc("mapTitle")}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border-line h-[26rem] w-full rounded-3xl border"
+              className="border-line h-[26rem] w-full rounded-sm border"
             />
           ) : (
             <div className="border-input bg-cream-dark texture-grain flex h-72 flex-col items-center justify-center gap-3 rounded-3xl border-2 border-dashed p-6 text-center">
               <MapPin aria-hidden="true" className="text-brown size-10" />
               <p className="text-stone max-w-md">{tcommon("placeholderMap")}</p>
             </div>
+          )}
+          {siteConfig.mapLink && (
+            <p className="mt-5 text-center">
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-line caps"
+              >
+                {tc("openMap")}
+              </a>
+            </p>
           )}
         </div>
       </section>

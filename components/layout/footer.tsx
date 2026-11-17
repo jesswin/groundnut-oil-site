@@ -50,6 +50,9 @@ export function Footer() {
             <Logo brand={brand} />
           </div>
           <p className="text-cream/85 mt-4 max-w-xs">{t(siteConfig.description, locale)}</p>
+          <p className="text-gold mt-4 text-sm">
+            {tf("company", { company: t(siteConfig.companyName, locale) })}
+          </p>
           <dl className="text-cream/85 mt-5 space-y-1 text-sm">
             <div className="flex flex-wrap gap-x-2">
               <dt className="font-semibold">{tf("fssai")}</dt>
@@ -148,19 +151,21 @@ export function Footer() {
             </li>
           </ul>
           <ul aria-label={tf("followUs")} className="flex gap-2">
-            {socials.map(({ key, name, Icon }) => (
-              <li key={key}>
-                <a
-                  href={siteConfig.social[key]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={tf("social", { network: name })}
-                  className="border-cream/25 hover:bg-gold hover:text-brown-dark inline-flex size-11 items-center justify-center rounded-full border transition-colors"
-                >
-                  <Icon className="size-5" />
-                </a>
-              </li>
-            ))}
+            {socials
+              .filter(({ key }) => siteConfig.social[key])
+              .map(({ key, name, Icon }) => (
+                <li key={key}>
+                  <a
+                    href={siteConfig.social[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={tf("social", { network: name })}
+                    className="border-cream/25 hover:bg-gold hover:text-brown-dark inline-flex size-11 items-center justify-center rounded-full border transition-colors"
+                  >
+                    <Icon className="size-5" />
+                  </a>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

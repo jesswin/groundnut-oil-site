@@ -75,32 +75,34 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       </section>
 
       {/* Founders */}
-      <section className="section">
-        <div className="container-page">
-          <SectionHeading eyebrow={ta("teamEyebrow")} title={ta("teamTitle")} className="mb-12" />
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((member, index) => (
-              <li key={member.image}>
-                <Reveal delay={index * 0.06}>
-                  <div className="text-center">
-                    <Image
-                      src={member.image}
-                      alt=""
-                      width={600}
-                      height={600}
-                      sizes="220px"
-                      className="blob mx-auto size-48 object-cover sm:size-56"
-                    />
-                    <h3 className="mt-6 text-xl">{t(member.name, locale)}</h3>
-                    <p className="text-leaf-dark font-semibold">{t(member.role, locale)}</p>
-                    <p className="text-stone mx-auto mt-3 max-w-xs">{t(member.bio, locale)}</p>
-                  </div>
-                </Reveal>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {team.length > 0 && (
+        <section className="section">
+          <div className="container-page">
+            <SectionHeading eyebrow={ta("teamEyebrow")} title={ta("teamTitle")} className="mb-12" />
+            <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {team.map((member, index) => (
+                <li key={member.image}>
+                  <Reveal delay={index * 0.06}>
+                    <div className="text-center">
+                      <Image
+                        src={member.image}
+                        alt=""
+                        width={600}
+                        height={600}
+                        sizes="220px"
+                        className="blob mx-auto size-48 object-cover sm:size-56"
+                      />
+                      <h3 className="mt-6 text-xl">{t(member.name, locale)}</h3>
+                      <p className="text-leaf-dark font-semibold">{t(member.role, locale)}</p>
+                      <p className="text-stone mx-auto mt-3 max-w-xs">{t(member.bio, locale)}</p>
+                    </div>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <StatsBand />
 
@@ -138,30 +140,34 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       </section>
 
       {/* Timeline */}
-      <section className="section bg-cream-dark/60">
-        <div className="container-page max-w-3xl">
-          <SectionHeading
-            eyebrow={ta("timelineEyebrow")}
-            title={ta("timelineTitle")}
-            className="mb-12"
-          />
-          <ol className="border-gold relative space-y-10 border-l-2 pl-8">
-            {timeline.map((item) => (
-              <li key={item.year} className="relative">
-                <span
-                  aria-hidden="true"
-                  className="bg-gold ring-cream absolute top-1.5 -left-[2.6rem] size-4 rounded-full ring-4"
-                />
-                <Reveal>
-                  <p className="font-heading text-leaf-dark text-2xl font-semibold">{item.year}</p>
-                  <h3 className="mt-1 text-xl">{t(item.title, locale)}</h3>
-                  <p className="text-stone mt-2 text-lg">{t(item.description, locale)}</p>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      {timeline.length > 0 && (
+        <section className="section bg-cream-dark/60">
+          <div className="container-page max-w-3xl">
+            <SectionHeading
+              eyebrow={ta("timelineEyebrow")}
+              title={ta("timelineTitle")}
+              className="mb-12"
+            />
+            <ol className="border-gold relative space-y-10 border-l-2 pl-8">
+              {timeline.map((item) => (
+                <li key={item.year} className="relative">
+                  <span
+                    aria-hidden="true"
+                    className="bg-gold ring-cream absolute top-1.5 -left-[2.6rem] size-4 rounded-full ring-4"
+                  />
+                  <Reveal>
+                    <p className="font-heading text-leaf-dark text-2xl font-semibold">
+                      {item.year}
+                    </p>
+                    <h3 className="mt-1 text-xl">{t(item.title, locale)}</h3>
+                    <p className="text-stone mt-2 text-lg">{t(item.description, locale)}</p>
+                  </Reveal>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
     </>
   );
 }
