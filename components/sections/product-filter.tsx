@@ -8,6 +8,7 @@ import { ProductCard, type ProductCardData } from "./product-card";
 export interface FilterableProduct extends ProductCardData {
   type: string;
   packSizeIds: string[];
+  packImages: Record<string, { src: string; alt: string }>;
 }
 interface Choice {
   id: string;
@@ -97,11 +98,17 @@ export function ProductFilter({
 
       {visible.length > 0 ? (
         <ul className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((product) => (
-            <li key={product.slug}>
-              <ProductCard product={product} cta={tc("viewDetails")} />
-            </li>
-          ))}
+          {visible.map((product) => {
+            const packImage = pack ? product.packImages[pack] : undefined;
+            const card = packImage
+              ? { ...product, image: packImage.src, imageAlt: packImage.alt }
+              : product;
+            return (
+              <li key={product.slug}>
+                <ProductCard product={card} cta={tc("viewDetails")} />
+              </li>
+            );
+          })}
         </ul>
       ) : (
         <div className="card-surface mt-4 p-10 text-center">

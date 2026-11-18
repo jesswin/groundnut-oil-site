@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/sections/page-hero";
 import { ProductFilter } from "@/components/sections/product-filter";
-import { toProductCard } from "@/lib/product-view";
+import { packImages, toProductCard } from "@/lib/product-view";
 import { buildMetadata } from "@/lib/seo";
 import {
   packSizes,
@@ -50,6 +50,7 @@ export default async function ProductsPage({ params }: PageProps<"/[locale]/prod
               ...toProductCard(p, locale),
               type: p.type,
               packSizeIds: p.packSizes,
+              packImages: packImages(p, locale),
             }))}
             types={usedTypes.map((id) => ({ id, label: t(productTypes[id], locale) }))}
             packs={usedPacks.map((id) => ({ id, label: t(packSizes[id], locale) }))}

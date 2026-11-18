@@ -74,7 +74,8 @@ export interface Product {
   uses: Localized<string[]>;
   shelfLife: Localized<string>;
   storage: Localized<string>;
-  images: { src: string; alt: Localized<string> }[];
+  /** The first image is the default. `pack` links a photo to a pack size for the product filter. */
+  images: { src: string; alt: Localized<string>; pack?: PackSizeId }[];
   featured: boolean;
 }
 
@@ -337,6 +338,7 @@ export const products: Product[] = [
     images: [
       {
         src: `${PRODUCT_IMAGES}/groundnut-1l.jpg`,
+        pack: "1l",
         alt: {
           en: "TATTVA FRESH filtered groundnut oil, 1 L bottle",
           hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 1 लीटर बोतल",
@@ -345,6 +347,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/groundnut-5l.jpg`,
+        pack: "5l",
         alt: {
           en: "TATTVA FRESH filtered groundnut oil, 5 L can",
           hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 5 लीटर कैन",
@@ -353,6 +356,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/groundnut-15kg.jpg`,
+        pack: "15kg-tin",
         alt: {
           en: "TATTVA FRESH filtered groundnut oil, 15 kg tin",
           hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 15 किलो टिन",
@@ -392,6 +396,7 @@ export const products: Product[] = [
     images: [
       {
         src: `${PRODUCT_IMAGES}/cottonseed-1l.jpg`,
+        pack: "1l",
         alt: {
           en: "TATTVA FRESH refined cottonseed oil, 1 L bottle",
           hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 1 लीटर बोतल",
@@ -400,6 +405,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/cottonseed-5l.jpg`,
+        pack: "5l",
         alt: {
           en: "TATTVA FRESH refined cottonseed oil, 5 L can",
           hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 5 लीटर कैन",
@@ -408,6 +414,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/cottonseed-15l.jpg`,
+        pack: "15l-tin",
         alt: {
           en: "TATTVA FRESH refined cottonseed oil, 15 L tin",
           hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 15 लीटर टिन",
@@ -415,7 +422,7 @@ export const products: Product[] = [
         },
       },
       {
-        src: `${PRODUCT_IMAGES}/cottonseed-15kg.jpg`,
+        src: `${PRODUCT_IMAGES}/cottonseed-15kg.jpg`, // gallery only: tin filters use the 15 L photo
         alt: {
           en: "TATTVA FRESH refined cottonseed oil, 15 kg tin",
           hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 15 किलो टिन",
@@ -455,6 +462,7 @@ export const products: Product[] = [
     images: [
       {
         src: `${PRODUCT_IMAGES}/sunflower-1l.jpg`,
+        pack: "1l",
         alt: {
           en: "TATTVA FRESH refined sunflower oil, 1 L bottle",
           hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 1 लीटर बोतल",
@@ -463,6 +471,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/sunflower-5l.jpg`,
+        pack: "5l",
         alt: {
           en: "TATTVA FRESH refined sunflower oil, 5 L can",
           hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 5 लीटर कैन",
@@ -471,6 +480,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/sunflower-15l.jpg`,
+        pack: "15l-tin",
         alt: {
           en: "TATTVA FRESH refined sunflower oil, 15 L tin",
           hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 15 लीटर टिन",
@@ -510,6 +520,7 @@ export const products: Product[] = [
     images: [
       {
         src: `${PRODUCT_IMAGES}/corn-1l.jpg`,
+        pack: "1l",
         alt: {
           en: "TATTVA FRESH corn oil, 1 L bottle",
           hi: "तत्त्व फ्रेश मक्के का तेल, 1 लीटर बोतल",
@@ -518,6 +529,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/corn-5l.jpg`,
+        pack: "5l",
         alt: {
           en: "TATTVA FRESH corn oil, 5 L can",
           hi: "तत्त्व फ्रेश मक्के का तेल, 5 लीटर कैन",
@@ -526,6 +538,7 @@ export const products: Product[] = [
       },
       {
         src: `${PRODUCT_IMAGES}/corn-15l.jpg`,
+        pack: "15l-tin",
         alt: {
           en: "TATTVA FRESH corn oil, 15 L tin",
           hi: "तत्त्व फ्रेश मक्के का तेल, 15 लीटर टिन",
@@ -542,11 +555,11 @@ export const products: Product[] = [
  * ========================================================================== */
 
 export const heroImage = {
-  src: "/images/brand/logo.jpg",
+  src: `${PRODUCT_IMAGES}/groundnut-1l.jpg`,
   alt: {
-    en: "TATTVA FRESH logo",
-    hi: "तत्त्व फ्रेश का लोगो",
-    gu: "તત્ત્વ ફ્રેશનો લોગો",
+    en: "1 L bottles of TATTVA FRESH pure groundnut oil",
+    hi: "तत्त्व फ्रेश शुद्ध मूंगफली तेल की 1 लीटर बोतलें",
+    gu: "તત્ત્વ ફ્રેશ શુદ્ધ સીંગતેલની 1 લિટર બોટલો",
   } as Localized<string>,
 };
 
