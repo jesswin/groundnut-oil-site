@@ -6,7 +6,6 @@ import { JsonLd } from "@/components/json-ld";
 import { FloatingActions } from "@/components/layout/floating-actions";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { Toaster } from "@/components/ui/sonner";
 import type { Locale } from "@/i18n/locales";
 import { routing } from "@/i18n/routing";
 import { fontClasses } from "@/lib/fonts";
@@ -47,7 +46,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
           </main>
           <Footer />
           <FloatingActions />
-          <Toaster />
         </NextIntlClientProvider>
         <JsonLd data={organizationJsonLd(locale)} />
         <JsonLd data={localBusinessJsonLd(locale)} />

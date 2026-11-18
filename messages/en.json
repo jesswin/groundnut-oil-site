@@ -215,15 +215,17 @@
     "message": "Message",
     "optional": "optional",
     "select": "Select an option",
-    "honeypot": "Leave this field empty",
-    "submit": "Send enquiry",
-    "sending": "Sending…",
-    "successTitle": "Thank you! Your enquiry has been sent.",
-    "successText": "We will get back to you soon. A confirmation has been sent to your email.",
-    "errorTitle": "Something went wrong",
-    "errorText": "We could not send your enquiry. Please try again or call us.",
-    "rateLimited": "Too many requests. Please wait a few minutes and try again.",
-    "invalid": "Please correct the highlighted fields."
+    "submit": "Send on WhatsApp",
+    "successTitle": "WhatsApp is opening with your enquiry.",
+    "successText": "Press send in WhatsApp to reach us. If it did not open, use the button below.",
+    "openWhatsapp": "Open WhatsApp",
+    "invalid": "Please correct the highlighted fields.",
+    "intro": {
+      "contact": "Hello TATTVA FRESH, I have an enquiry:",
+      "bulk": "Hello TATTVA FRESH, I'd like to place a bulk order enquiry:",
+      "distributor": "Hello TATTVA FRESH, I'd like to apply to become a distributor:",
+      "quote": "Hello TATTVA FRESH, please send me a quote:"
+    }
   },
   "errors": {
     "required": "This field is required.",
@@ -234,14 +236,5 @@
     "select": "Please select an option.",
     "messageMin": "Please write at least 10 characters.",
     "tooLong": "This is too long. Please shorten it."
-  },
-  "email": {
-    "subject": "We have received your enquiry | {brand}",
-    "greeting": "Dear {name},",
-    "body": "Thank you for contacting {brand}. We have received your enquiry and our team will get back to you soon.",
-    "summaryTitle": "Your details",
-    "urgent": "For anything urgent, call us on {phone}.",
-    "signoff": "Warm regards,",
-    "team": "Team {brand}"
   }
 }

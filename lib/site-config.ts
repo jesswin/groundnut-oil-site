@@ -23,6 +23,7 @@
  *   12. Legal pages
  */
 
+import { WHATSAPP_NUMBER, whatsappLink } from "@/lib/whatsapp";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/locales";
 
 /* ============================================================================
@@ -188,7 +189,7 @@ export const siteConfig = {
   mapLink: "https://maps.app.goo.gl/uZgB6zA3Av4vcwVD8",
   phone: "+91 76176 36936",
   /** Digits only, with country code, for wa.me links. */
-  whatsapp: "917617636936",
+  whatsapp: WHATSAPP_NUMBER, // edit in lib/whatsapp.ts
   whatsappMessage: {
     en: "Hi, I'd like to enquire about TATTVA FRESH oils.",
     hi: "नमस्ते, मुझे तत्त्व फ्रेश तेल के बारे में जानकारी चाहिए।",
@@ -1043,9 +1044,9 @@ export const legal = {
         gu: "અમે કઈ માહિતી લઈએ છીએ",
       },
       body: {
-        en: "When you submit a form on this website we collect the details you enter, such as your name, phone number, email address, company and message.",
-        hi: "जब आप इस वेबसाइट पर कोई फ़ॉर्म भेजते हैं, तो हम आपकी भरी हुई जानकारी लेते हैं, जैसे नाम, फ़ोन नंबर, ईमेल, कंपनी और संदेश।",
-        gu: "જ્યારે તમે આ વેબસાઇટ પર કોઈ ફોર્મ મોકલો છો, ત્યારે અમે તમે ભરેલી વિગતો લઈએ છીએ, જેમ કે નામ, ફોન નંબર, ઇમેઇલ, કંપની અને સંદેશ.",
+        en: "Our enquiry forms do not send or store anything on this website. When you press the button, WhatsApp opens with the details you entered, such as your name, phone number, email address, company and message. We receive them only if you send that message.",
+        hi: "हमारे पूछताछ फ़ॉर्म इस वेबसाइट पर कुछ भी नहीं भेजते या रखते। बटन दबाने पर व्हाट्सऐप आपकी भरी हुई जानकारी के साथ खुलता है, जैसे नाम, फ़ोन नंबर, ईमेल, कंपनी और संदेश। यह जानकारी हमें तभी मिलती है जब आप वह संदेश भेजते हैं।",
+        gu: "અમારા પૂછપરછ ફોર્મ આ વેબસાઇટ પર કંઈ મોકલતા કે રાખતા નથી. બટન દબાવતાં વોટ્સએપ તમે ભરેલી વિગતો સાથે ખૂલે છે, જેમ કે નામ, ફોન નંબર, ઇમેઇલ, કંપની અને સંદેશ. આ વિગતો અમને ત્યારે જ મળે છે જ્યારે તમે એ સંદેશ મોકલો.",
       },
     },
     {
@@ -1135,7 +1136,7 @@ export function getProduct(slug: string): Product | undefined {
 
 export function whatsappUrl(locale: string, message?: string): string {
   const text = message ?? t(siteConfig.whatsappMessage, locale);
-  return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(text)}`;
+  return whatsappLink(text);
 }
 
 export function telUrl(): string {

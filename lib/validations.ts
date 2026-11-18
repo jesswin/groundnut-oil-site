@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 /**
- * Shared form schemas. The same schema runs in the browser (React Hook Form) and in the
- * server action; error messages come from the `errors` namespace of /messages/<locale>.json.
+ * Form schemas, checked in the browser before the enquiry is handed to WhatsApp. Error
+ * messages come from the `errors` namespace of /messages/<locale>.json.
  */
 
 export type FormKind = "contact" | "bulk" | "distributor" | "quote";
@@ -48,7 +48,13 @@ export interface FieldDef {
 const f = {
   name: { name: "name", labelKey: "name", type: "text", required: true, autoComplete: "name" },
   phone: { name: "phone", labelKey: "phone", type: "tel", required: true, autoComplete: "tel" },
-  email: { name: "email", labelKey: "email", type: "email", required: true, autoComplete: "email" },
+  email: {
+    name: "email",
+    labelKey: "email",
+    type: "email",
+    required: false,
+    autoComplete: "email",
+  },
   product: {
     name: "product",
     labelKey: "product",
@@ -167,12 +173,7 @@ export function makeSchema(kind: FormKind, te: Translate) {
     firm: text(),
     gst: z.string().trim().regex(GST_RE, te("gst")).or(z.literal("")),
     phone: z.string().trim().min(1, te("required")).regex(PHONE_RE, te("phone")),
-    email: z
-      .string()
-      .trim()
-      .min(1, te("required"))
-      .max(120, te("tooLong"))
-      .regex(EMAIL_RE, te("email")),
+    email: z.string().trim().max(120, te("tooLong")).regex(EMAIL_RE, te("email")).or(z.literal("")),
     product: z.string().min(1, te("select")).max(80, te("tooLong")),
     quantity: text(),
     frequency: z.string().min(1, te("select")).max(40, te("tooLong")),

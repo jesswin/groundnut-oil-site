@@ -22,12 +22,9 @@ npm run dev                  # http://localhost:3000
 
 ## Environment variables
 
-| Variable               | Required           | Purpose                                                                                                                                                                                                                   |
-| ---------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `RESEND_API_KEY`       | For email          | API key from [resend.com](https://resend.com). Without it, form submissions are logged to the server console in development. In production a missing key makes forms show an error, so enquiries are never silently lost. |
-| `CONTACT_TO_EMAIL`     | No                 | Inbox that receives enquiries. Defaults to `emails.sales` in `lib/site-config.ts`.                                                                                                                                        |
-| `NEXT_PUBLIC_SITE_URL` | Yes in production  | Public URL without a trailing slash. Used for canonical URLs, hreflang, sitemap and Open Graph. Defaults to `siteUrl` in `lib/site-config.ts`.                                                                            |
-| `EMAIL_FROM`           | Yes for real email | Sender, e.g. `Brand <enquiries@yourdomain.com>`. The domain must be verified in Resend. The default `onboarding@resend.dev` can only send to your own Resend account address.                                             |
+| Variable               | Required          | Purpose                                                                                                                                        |
+| ---------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Yes in production | Public URL without a trailing slash. Used for canonical URLs, hreflang, sitemap and Open Graph. Defaults to `siteUrl` in `lib/site-config.ts`. |
 
 ## Editing content: `lib/site-config.ts`
 
@@ -45,7 +42,7 @@ All business details and page content live in this one file: brand, contact, cer
 
 ## Editing translations: `/messages`
 
-Interface text (navigation, buttons, headings, form labels, validation errors, toasts, email auto-reply) is in `messages/en.json`, `messages/hi.json` and `messages/gu.json`. The three files have identical keys; change the values only. Text in `{braces}` is a variable and must be kept as is.
+Interface text (navigation, buttons, headings, form labels, validation errors, WhatsApp message text) is in `messages/en.json`, `messages/hi.json` and `messages/gu.json`. The three files have identical keys; change the values only. Text in `{braces}` is a variable and must be kept as is.
 
 ## Adding a new language
 
@@ -80,16 +77,11 @@ Post content in Markdown. Tables are supported.
 
 If a language file is missing, that language shows the English post with a short notice.
 
-## Forms and email
+## Forms and WhatsApp
 
-Contact, bulk order, distributor and quote forms share one component (`components/forms/enquiry-form.tsx`), one set of Zod schemas (`lib/validations.ts`, used in the browser and on the server) and one server action (`app/actions/enquiry.ts`).
+Contact, bulk order, distributor and quote forms share one component (`components/forms/enquiry-form.tsx`) and one set of Zod schemas (`lib/validations.ts`).
 
-Each submission passes a honeypot check and a rate limit (5 per 10 minutes per IP), then sends:
-
-1. an email to the business inbox in English, with the customer's language noted and reply-to set to the customer;
-2. an auto-reply to the customer in their language.
-
-The rate limit is held in memory, so on serverless hosting it is per server instance. It stops bursts but is not a strict limit.
+Nothing is sent to a server. When the form is valid, WhatsApp opens (app on phones, WhatsApp Web or desktop on computers) with the enquiry written out in the visitor's language, addressed to the number in `lib/whatsapp.ts`. The visitor presses send and the enquiry arrives in the business WhatsApp chat.
 
 ## Project structure
 
@@ -101,7 +93,7 @@ components/ui/       shadcn/ui components
 components/layout/   Header, mobile menu, language switcher, footer, floating buttons
 components/sections/ Page sections
 components/forms/    Enquiry form
-lib/                 site-config, seo, email, validations, rate-limit, blog, fonts
+lib/                 site-config, seo, whatsapp, validations, blog, fonts
 i18n/                Locales, routing, navigation, request config
 messages/            en.json, hi.json, gu.json
 content/blog/        MDX posts per language
@@ -121,8 +113,7 @@ Notes on choices that differ from older Next.js projects:
 2. In Vercel, choose **Add New → Project** and import the repository. The defaults are correct.
 3. Add the environment variables from the table above under **Settings → Environment Variables**.
 4. Deploy, then add your domain under **Settings → Domains** and set `NEXT_PUBLIC_SITE_URL` to it. Redeploy after changing it.
-5. In Resend, verify your sending domain and set `EMAIL_FROM` to an address on it.
-6. Submit `https://yourdomain.com/sitemap.xml` in Google Search Console.
+5. Submit `https://yourdomain.com/sitemap.xml` in Google Search Console.
 
 ---
 
