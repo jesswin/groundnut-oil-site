@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <header className="border-line/70 bg-cream/95 supports-backdrop-filter:bg-cream/85 sticky top-0 z-40 border-b backdrop-blur">
-      <div className="mx-auto flex h-[4.5rem] w-full max-w-[90rem] items-center justify-between gap-3 px-5 sm:px-8">
+      <div className="container-page flex h-[4.5rem] items-center justify-between gap-3">
         <Link href="/" aria-label={tn("homeLink", { brand })} className="shrink-0 rounded-lg">
           <Logo brand={brand} />
         </Link>

@@ -39,7 +39,7 @@ async function loadFont(family: string, weight: number, text: string) {
 export default async function OpenGraphImage() {
   const brand = siteConfig.brandName.en;
   const tagline = siteConfig.tagline.en;
-  const eyebrow = `EST. ${siteConfig.establishedYear}  ·  ${siteConfig.location.city.en.toUpperCase()}, ${siteConfig.location.state.en.toUpperCase()}`;
+  const eyebrow = `GROUNDNUT OIL MANUFACTURER  ·  ${siteConfig.location.city.en.toUpperCase()}, ${siteConfig.location.state.en.toUpperCase()}`;
   const range = products.map((p) => p.name.en.replace(/^(Filtered|Refined) /, "")).join("  ·  ");
 
   const serif = await loadFont("Fraunces", 400, brand + tagline);

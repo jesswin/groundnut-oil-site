@@ -134,7 +134,8 @@ export interface LegalSection {
 
 export type FaqCategoryId = "products" | "health" | "orders";
 
-const PLACEHOLDER = "/images/placeholders"; // TODO: replace placeholder images with real photos
+const PLACEHOLDER = "/images/placeholders"; // TODO: replace remaining placeholder images with real photos
+const PRODUCT_IMAGES = "/images/products";
 
 /* ============================================================================
  * 2. BRAND AND CONTACT
@@ -154,9 +155,9 @@ export const siteConfig = {
     gu: "સાચી ગુણવત્તા, નેક ઇરાદાથી",
   } as Localized<string>,
   description: {
-    en: "Filtered groundnut oil and refined cottonseed, sunflower and corn oil, packed in Rajkot, Gujarat for homes, dealers and bulk buyers.",
-    hi: "फ़िल्टर्ड मूंगफली तेल और रिफ़ाइंड बिनौला, सूरजमुखी और मक्का तेल, राजकोट, गुजरात में घरों, डीलरों और थोक ख़रीदारों के लिए पैक किया गया।",
-    gu: "ફિલ્ટર્ડ સીંગતેલ અને રિફાઇન્ડ કપાસિયા, સૂરજમુખી અને મકાઈ તેલ, રાજકોટ, ગુજરાતમાં ઘર, ડીલરો અને જથ્થાબંધ ખરીદદારો માટે પેક કરેલું.",
+    en: "Groundnut oil manufacturer in Rajkot, Gujarat. We press our own filtered groundnut oil and also supply refined cottonseed, sunflower and corn oil to homes, dealers and bulk buyers.",
+    hi: "राजकोट, गुजरात में मूंगफली तेल निर्माता। हम अपना फ़िल्टर्ड मूंगफली तेल ख़ुद निकालते हैं और घरों, डीलरों व थोक ख़रीदारों को रिफ़ाइंड बिनौला, सूरजमुखी और मक्का तेल भी सप्लाई करते हैं।",
+    gu: "રાજકોટ, ગુજરાતમાં સીંગતેલ ઉત્પાદક. અમે અમારું ફિલ્ટર્ડ સીંગતેલ જાતે પીલીએ છીએ અને ઘર, ડીલરો તથા જથ્થાબંધ ખરીદદારોને રિફાઇન્ડ કપાસિયા, સૂરજમુખી અને મકાઈ તેલ પણ સપ્લાય કરીએ છીએ.",
   } as Localized<string>,
   establishedYear: 2026,
   location: {
@@ -310,9 +311,9 @@ export const products: Product[] = [
     slug: "filtered-groundnut-oil",
     name: { en: "Filtered Groundnut Oil", hi: "फ़िल्टर्ड मूंगफली तेल", gu: "ફિલ્ટર્ડ સીંગતેલ" },
     shortDescription: {
-      en: "Pressed from graded groundnuts and double filtered for a clear oil with a rich, nutty taste.",
-      hi: "छँटी हुई मूंगफली से निकाला और दो बार छाना गया साफ़ तेल, भरपूर सोंधे स्वाद के साथ।",
-      gu: "ગ્રેડ કરેલા સીંગદાણામાંથી પીલેલું અને બે વાર ગાળેલું ચોખ્ખું તેલ, સીંગના ભરપૂર સ્વાદ સાથે.",
+      en: "Made in our own mill: pressed from graded groundnuts and double filtered for a clear oil with a rich, nutty taste.",
+      hi: "हमारी अपनी मिल में बना: छँटी हुई मूंगफली से निकाला और दो बार छाना गया साफ़ तेल, भरपूर सोंधे स्वाद के साथ।",
+      gu: "અમારી પોતાની મિલમાં બનેલું: ગ્રેડ કરેલા સીંગદાણામાંથી પીલેલું અને બે વાર ગાળેલું ચોખ્ખું તેલ, સીંગના ભરપૂર સ્વાદ સાથે.",
     },
     longDescription: {
       en: "Our filtered groundnut oil is pressed from graded Saurashtra groundnuts and passed through filters to remove sediment, without chemical refining. It keeps the natural aroma Gujarati kitchens know, and suits daily cooking, farsan and deep frying.",
@@ -335,21 +336,29 @@ export const products: Product[] = [
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-filtered-groundnut-oil.svg`,
+        src: `${PRODUCT_IMAGES}/groundnut-1l.jpg`,
         alt: {
-          en: "Bottle of TATTVA FRESH filtered groundnut oil",
-          hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल की बोतल",
-          gu: "તત્ત્વ ફ્રેશ ફિલ્ટર્ડ સીંગતેલની બોટલ",
+          en: "TATTVA FRESH filtered groundnut oil, 1 L bottle",
+          hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 1 लीटर बोतल",
+          gu: "તત્ત્વ ફ્રેશ ફિલ્ટર્ડ સીંગતેલ, 1 લિટર બોટલ",
         },
-      }, // TODO: replace
+      },
       {
-        src: `${PLACEHOLDER}/product-filtered-groundnut-oil-2.svg`,
+        src: `${PRODUCT_IMAGES}/groundnut-5l.jpg`,
         alt: {
-          en: "Filtered groundnut oil pack sizes",
-          hi: "फ़िल्टर्ड मूंगफली तेल के पैक साइज़",
-          gu: "ફિલ્ટર્ડ સીંગતેલના પેક સાઇઝ",
+          en: "TATTVA FRESH filtered groundnut oil, 5 L can",
+          hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 5 लीटर कैन",
+          gu: "તત્ત્વ ફ્રેશ ફિલ્ટર્ડ સીંગતેલ, 5 લિટર કેન",
         },
-      }, // TODO: replace
+      },
+      {
+        src: `${PRODUCT_IMAGES}/groundnut-15kg.jpg`,
+        alt: {
+          en: "TATTVA FRESH filtered groundnut oil, 15 kg tin",
+          hi: "तत्त्व फ्रेश फ़िल्टर्ड मूंगफली तेल, 15 किलो टिन",
+          gu: "તત્ત્વ ફ્રેશ ફિલ્ટર્ડ સીંગતેલ, 15 કિલો ડબ્બો",
+        },
+      },
     ],
     featured: true,
   },
@@ -382,21 +391,37 @@ export const products: Product[] = [
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-refined-cottonseed-oil.svg`,
+        src: `${PRODUCT_IMAGES}/cottonseed-1l.jpg`,
         alt: {
-          en: "Bottle of TATTVA FRESH refined cottonseed oil",
-          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल की बोतल",
-          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલની બોટલ",
+          en: "TATTVA FRESH refined cottonseed oil, 1 L bottle",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 1 लीटर बोतल",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલ, 1 લિટર બોટલ",
         },
-      }, // TODO: replace
+      },
       {
-        src: `${PLACEHOLDER}/product-refined-cottonseed-oil-2.svg`,
+        src: `${PRODUCT_IMAGES}/cottonseed-5l.jpg`,
         alt: {
-          en: "Refined cottonseed oil pack sizes",
-          hi: "रिफ़ाइंड बिनौला तेल के पैक साइज़",
-          gu: "રિફાઇન્ડ કપાસિયા તેલના પેક સાઇઝ",
+          en: "TATTVA FRESH refined cottonseed oil, 5 L can",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 5 लीटर कैन",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલ, 5 લિટર કેન",
         },
-      }, // TODO: replace
+      },
+      {
+        src: `${PRODUCT_IMAGES}/cottonseed-15l.jpg`,
+        alt: {
+          en: "TATTVA FRESH refined cottonseed oil, 15 L tin",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 15 लीटर टिन",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલ, 15 લિટર ડબ્બો",
+        },
+      },
+      {
+        src: `${PRODUCT_IMAGES}/cottonseed-15kg.jpg`,
+        alt: {
+          en: "TATTVA FRESH refined cottonseed oil, 15 kg tin",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड बिनौला तेल, 15 किलो टिन",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ કપાસિયા તેલ, 15 કિલો ડબ્બો",
+        },
+      },
     ],
     featured: true,
   },
@@ -429,21 +454,29 @@ export const products: Product[] = [
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-refined-sunflower-oil.svg`,
+        src: `${PRODUCT_IMAGES}/sunflower-1l.jpg`,
         alt: {
-          en: "Bottle of TATTVA FRESH refined sunflower oil",
-          hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल की बोतल",
-          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ સૂરજમુખી તેલની બોટલ",
+          en: "TATTVA FRESH refined sunflower oil, 1 L bottle",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 1 लीटर बोतल",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ સૂરજમુખી તેલ, 1 લિટર બોટલ",
         },
-      }, // TODO: replace
+      },
       {
-        src: `${PLACEHOLDER}/product-refined-sunflower-oil-2.svg`,
+        src: `${PRODUCT_IMAGES}/sunflower-5l.jpg`,
         alt: {
-          en: "Refined sunflower oil pack sizes",
-          hi: "रिफ़ाइंड सूरजमुखी तेल के पैक साइज़",
-          gu: "રિફાઇન્ડ સૂરજમુખી તેલના પેક સાઇઝ",
+          en: "TATTVA FRESH refined sunflower oil, 5 L can",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 5 लीटर कैन",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ સૂરજમુખી તેલ, 5 લિટર કેન",
         },
-      }, // TODO: replace
+      },
+      {
+        src: `${PRODUCT_IMAGES}/sunflower-15l.jpg`,
+        alt: {
+          en: "TATTVA FRESH refined sunflower oil, 15 L tin",
+          hi: "तत्त्व फ्रेश रिफ़ाइंड सूरजमुखी तेल, 15 लीटर टिन",
+          gu: "તત્ત્વ ફ્રેશ રિફાઇન્ડ સૂરજમુખી તેલ, 15 લિટર ડબ્બો",
+        },
+      },
     ],
     featured: true,
   },
@@ -476,17 +509,29 @@ export const products: Product[] = [
     storage: OIL_STORAGE,
     images: [
       {
-        src: `${PLACEHOLDER}/product-corn-oil.svg`,
+        src: `${PRODUCT_IMAGES}/corn-1l.jpg`,
         alt: {
-          en: "Bottle of TATTVA FRESH corn oil",
-          hi: "तत्त्व फ्रेश मक्के के तेल की बोतल",
-          gu: "તત્ત્વ ફ્રેશ મકાઈના તેલની બોટલ",
+          en: "TATTVA FRESH corn oil, 1 L bottle",
+          hi: "तत्त्व फ्रेश मक्के का तेल, 1 लीटर बोतल",
+          gu: "તત્ત્વ ફ્રેશ મકાઈનું તેલ, 1 લિટર બોટલ",
         },
-      }, // TODO: replace
+      },
       {
-        src: `${PLACEHOLDER}/product-corn-oil-2.svg`,
-        alt: { en: "Corn oil pack sizes", hi: "मक्के के तेल के पैक साइज़", gu: "મકાઈના તેલના પેક સાઇઝ" },
-      }, // TODO: replace
+        src: `${PRODUCT_IMAGES}/corn-5l.jpg`,
+        alt: {
+          en: "TATTVA FRESH corn oil, 5 L can",
+          hi: "तत्त्व फ्रेश मक्के का तेल, 5 लीटर कैन",
+          gu: "તત્ત્વ ફ્રેશ મકાઈનું તેલ, 5 લિટર કેન",
+        },
+      },
+      {
+        src: `${PRODUCT_IMAGES}/corn-15l.jpg`,
+        alt: {
+          en: "TATTVA FRESH corn oil, 15 L tin",
+          hi: "तत्त्व फ्रेश मक्के का तेल, 15 लीटर टिन",
+          gu: "તત્ત્વ ફ્રેશ મકાઈનું તેલ, 15 લિટર ડબ્બો",
+        },
+      },
     ],
     featured: false,
   },
@@ -497,11 +542,11 @@ export const products: Product[] = [
  * ========================================================================== */
 
 export const heroImage = {
-  src: `${PLACEHOLDER}/hero-product.svg`, // TODO: replace
+  src: "/images/brand/logo.jpg",
   alt: {
-    en: "TATTVA FRESH edible oil bottle",
-    hi: "तत्त्व फ्रेश खाद्य तेल की बोतल",
-    gu: "તત્ત્વ ફ્રેશ ખાદ્યતેલની બોટલ",
+    en: "TATTVA FRESH logo",
+    hi: "तत्त्व फ्रेश का लोगो",
+    gu: "તત્ત્વ ફ્રેશનો લોગો",
   } as Localized<string>,
 };
 
@@ -630,7 +675,7 @@ export const about = {
       "તત્ત્વ એટલે સાર. અમારી શરૂઆત એક સીધા વિચારથી થઈ: પ્રામાણિક, શુદ્ધ તેલ પેક કરવું, એવું જ જેવું સૌરાષ્ટ્રના પરિવારો અને રસોડાં હંમેશાં અપેક્ષા રાખતાં આવ્યાં છે, અને તેને ઘર, ડીલરો અને વ્યવસાયો સુધી ભરોસાથી પહોંચાડવું.",
     ],
   } as Localized<string[]>,
-  storyImage: `${PLACEHOLDER}/about-story.svg`, // TODO: replace
+  storyImage: "/images/brand/logo.jpg",
   mission: {
     en: "To bring pure, honestly packed edible oil to every kitchen we serve, at a fair price.",
     hi: "हर रसोई तक शुद्ध और ईमानदारी से पैक किया गया खाद्य तेल, उचित दाम पर पहुँचाना।",
@@ -643,9 +688,9 @@ export const about = {
   } as Localized<string>,
   factory: {
     description: {
-      en: "Our unit is at Sokhada, near Rajkot, with a capacity of 2,000 litres a day. Oil is filtered, packed and sealed on site, and every batch is checked before it leaves.",
-      hi: "हमारी यूनिट राजकोट के पास सोखडा में है, जिसकी क्षमता रोज़ 2,000 लीटर है। तेल की छनाई, पैकिंग और सीलिंग यहीं होती है, और हर बैच निकलने से पहले जाँचा जाता है।",
-      gu: "અમારું યુનિટ રાજકોટ પાસે સોખડામાં છે, જેની ક્ષમતા રોજના 2,000 લિટર છે. તેલનું ગાળણ, પેકિંગ અને સીલિંગ અહીં જ થાય છે, અને દરેક બેચ નીકળતા પહેલાં ચકાસવામાં આવે છે.",
+      en: "Our unit is at Sokhada, near Rajkot, with a capacity of 2,000 litres a day. Our groundnut oil is pressed, filtered and packed here, and every batch is checked before it leaves.",
+      hi: "हमारी यूनिट राजकोट के पास सोखडा में है, जिसकी क्षमता रोज़ 2,000 लीटर है। हमारा मूंगफली तेल यहीं निकाला, छाना और पैक किया जाता है, और हर बैच निकलने से पहले जाँचा जाता है।",
+      gu: "અમારું યુનિટ રાજકોટ પાસે સોખડામાં છે, જેની ક્ષમતા રોજના 2,000 લિટર છે. અમારું સીંગતેલ અહીં જ પીલાય, ગળાય અને પેક થાય છે, અને દરેક બેચ નીકળતા પહેલાં ચકાસવામાં આવે છે.",
     } as Localized<string>,
     highlights: {
       en: ["2,000 litres daily capacity", "1 L bottles to 15 kg tins", "Pan-India dispatch"],
@@ -725,11 +770,11 @@ export const quality = {
 export const bulkBenefits: Feature[] = [
   {
     icon: "tag",
-    title: { en: "Factory-direct pricing", hi: "सीधे फ़ैक्टरी के दाम", gu: "સીધા ફેક્ટરીના ભાવ" },
+    title: { en: "Direct pricing", hi: "सीधे दाम", gu: "સીધા ભાવ" },
     description: {
-      en: "Buy straight from the manufacturer with volume-based rates.",
-      hi: "सीधे निर्माता से ख़रीदें, मात्रा के अनुसार दरों पर।",
-      gu: "સીધા ઉત્પાદક પાસેથી ખરીદો, જથ્થા પ્રમાણેના ભાવે.",
+      en: "Groundnut oil straight from the manufacturer, and volume-based rates on every oil.",
+      hi: "मूंगफली तेल सीधे निर्माता से, और हर तेल पर मात्रा के अनुसार दरें।",
+      gu: "સીંગતેલ સીધું ઉત્પાદક પાસેથી, અને દરેક તેલ પર જથ્થા પ્રમાણેના ભાવ.",
     },
   },
   {
@@ -793,9 +838,9 @@ export const distributorBenefits: Feature[] = [
     icon: "truck",
     title: { en: "Steady supply", hi: "नियमित सप्लाई", gu: "નિયમિત સપ્લાય" },
     description: {
-      en: "Regular dispatch from our own factory, all year round.",
-      hi: "हमारी अपनी फ़ैक्टरी से साल भर नियमित डिस्पैच।",
-      gu: "અમારી પોતાની ફેક્ટરીમાંથી આખું વર્ષ નિયમિત ડિસ્પેચ.",
+      en: "Regular dispatch from Rajkot, all year round.",
+      hi: "राजकोट से साल भर नियमित डिस्पैच।",
+      gu: "રાજકોટથી આખું વર્ષ નિયમિત ડિસ્પેચ.",
     },
   },
 ]; // TODO: replace

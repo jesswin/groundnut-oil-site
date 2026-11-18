@@ -72,10 +72,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               ))}
             </ul>
           </div>
-          <div className="relative order-first mx-auto w-full max-w-[15rem] sm:max-w-xs lg:order-none lg:max-w-none">
+          <div className="relative order-first mx-auto w-full max-w-[15rem] sm:max-w-xs lg:order-none lg:max-w-none p-3 sm:p-4">
             <div
               aria-hidden="true"
-              className="border-gold/60 absolute -inset-3 rounded-t-full border sm:-inset-4"
+              className="border-gold/60 absolute inset-0 rounded-t-full border"
             />
             <Image
               src={heroImage.src}

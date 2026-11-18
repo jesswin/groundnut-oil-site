@@ -41,9 +41,9 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
               src={about.storyImage}
               alt=""
               width={1200}
-              height={900}
+              height={1200}
               sizes="(min-width: 1024px) 520px, 90vw"
-              className="relative aspect-[4/3] w-full rounded-3xl object-cover"
+              className="relative aspect-square w-full object-cover"
             />
           </div>
           <div>

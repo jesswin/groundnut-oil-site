@@ -19,14 +19,14 @@ export function ProductGallery({
 
   return (
     <div role="group" aria-label={label}>
-      <div className="bg-cream-dark relative aspect-square overflow-hidden rounded-3xl">
+      <div className="bg-cream-dark relative aspect-[4/5] overflow-hidden">
         <Image
           src={current.src}
           alt={current.alt}
           fill
           priority
           sizes="(min-width: 1024px) 520px, 92vw"
-          className="object-cover"
+          className="object-contain mix-blend-multiply"
         />
       </div>
       {images.length > 1 && (
@@ -39,11 +39,11 @@ export function ProductGallery({
                 aria-label={thumbLabels[index]}
                 aria-pressed={index === active}
                 className={cn(
-                  "border-line relative block size-20 overflow-hidden rounded-xl border-2 sm:size-24",
-                  index === active && "border-brown",
+                  "border-line bg-cream-dark relative block h-20 w-16 overflow-hidden border sm:h-24 sm:w-[4.8rem]",
+                  index === active && "border-gold-deep",
                 )}
               >
-                <Image src={image.src} alt="" fill sizes="96px" className="object-cover" />
+                <Image src={image.src} alt="" fill sizes="96px" className="object-cover mix-blend-multiply" />
               </button>
             </li>
           ))}

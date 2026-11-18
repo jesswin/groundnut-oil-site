@@ -155,7 +155,7 @@ html[lang^="gu"] {
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
   }
   .section {
     @apply py-20 sm:py-24 lg:py-32;

@@ -22,7 +22,7 @@ export function ProductCard({ product, cta }: { product: ProductCardData; cta: s
           alt={product.imageAlt}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          className="object-cover mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
       </div>
       <div className="flex flex-1 flex-col pt-6">
