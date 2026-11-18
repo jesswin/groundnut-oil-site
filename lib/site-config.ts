@@ -676,16 +676,16 @@ export const processSteps: ProcessStep[] = [
 export const about = {
   story: {
     en: [
-      "TATTVA FRESH is the edible oil brand of Shree Ram Food Corporate, started in 2026 in Rajkot, at the centre of Gujarat's groundnut and oil trade.",
-      "Tattva means essence. We started with a simple idea: pack honest, pure oil, the way families and kitchens in Saurashtra have always expected it to be, and deliver it reliably to homes, dealers and businesses.",
+      "TATTVA FRESH is the edible oil brand of Shree Ram Food Corporate, a groundnut oil manufacturer started in 2026 in Rajkot, at the centre of Gujarat's groundnut and oil trade.",
+      "Tattva means essence. We started with a simple idea: honest, pure oil, the way families and kitchens in Saurashtra have always expected it to be. We press our own groundnut oil in our mill at Sokhada, source our refined cottonseed, sunflower and corn oil from trusted suppliers, and deliver them reliably to homes, dealers and businesses.",
     ],
     hi: [
-      "तत्त्व फ्रेश, श्री राम फ़ूड कॉर्पोरेट का खाद्य तेल ब्रांड है, जिसकी शुरुआत 2026 में राजकोट में हुई, जो गुजरात के मूंगफली और तेल व्यापार का केंद्र है।",
-      "तत्त्व का अर्थ है सार। हमारी शुरुआत एक सीधे विचार से हुई: ईमानदार, शुद्ध तेल पैक करना, वैसा ही जैसा सौराष्ट्र के परिवार और रसोई हमेशा से चाहते आए हैं, और उसे घरों, डीलरों और व्यवसायों तक भरोसे से पहुँचाना।",
+      "तत्त्व फ्रेश, श्री राम फ़ूड कॉर्पोरेट का खाद्य तेल ब्रांड है। श्री राम फ़ूड कॉर्पोरेट मूंगफली तेल निर्माता है, जिसकी शुरुआत 2026 में राजकोट में हुई, जो गुजरात के मूंगफली और तेल व्यापार का केंद्र है।",
+      "तत्त्व का अर्थ है सार। हमारी शुरुआत एक सीधे विचार से हुई: ईमानदार, शुद्ध तेल, वैसा ही जैसा सौराष्ट्र के परिवार और रसोई हमेशा से चाहते आए हैं। हम अपना मूंगफली तेल सोखडा की अपनी मिल में ख़ुद निकालते हैं, रिफ़ाइंड बिनौला, सूरजमुखी और मक्का तेल भरोसेमंद सप्लायरों से लेते हैं, और इन्हें घरों, डीलरों और व्यवसायों तक भरोसे से पहुँचाते हैं।",
     ],
     gu: [
-      "તત્ત્વ ફ્રેશ એ શ્રી રામ ફૂડ કોર્પોરેટની ખાદ્યતેલ બ્રાન્ડ છે, જેની શરૂઆત 2026 માં રાજકોટમાં થઈ, જે ગુજરાતના સીંગ અને તેલ વેપારનું કેન્દ્ર છે.",
-      "તત્ત્વ એટલે સાર. અમારી શરૂઆત એક સીધા વિચારથી થઈ: પ્રામાણિક, શુદ્ધ તેલ પેક કરવું, એવું જ જેવું સૌરાષ્ટ્રના પરિવારો અને રસોડાં હંમેશાં અપેક્ષા રાખતાં આવ્યાં છે, અને તેને ઘર, ડીલરો અને વ્યવસાયો સુધી ભરોસાથી પહોંચાડવું.",
+      "તત્ત્વ ફ્રેશ એ શ્રી રામ ફૂડ કોર્પોરેટની ખાદ્યતેલ બ્રાન્ડ છે. શ્રી રામ ફૂડ કોર્પોરેટ સીંગતેલ ઉત્પાદક છે, જેની શરૂઆત 2026 માં રાજકોટમાં થઈ, જે ગુજરાતના સીંગ અને તેલ વેપારનું કેન્દ્ર છે.",
+      "તત્ત્વ એટલે સાર. અમારી શરૂઆત એક સીધા વિચારથી થઈ: પ્રામાણિક, શુદ્ધ તેલ, એવું જ જેવું સૌરાષ્ટ્રના પરિવારો અને રસોડાં હંમેશાં અપેક્ષા રાખતાં આવ્યાં છે. અમે અમારું સીંગતેલ સોખડાની અમારી મિલમાં જાતે પીલીએ છીએ, રિફાઇન્ડ કપાસિયા, સૂરજમુખી અને મકાઈ તેલ ભરોસાપાત્ર સપ્લાયરો પાસેથી લઈએ છીએ, અને તેને ઘર, ડીલરો અને વ્યવસાયો સુધી ભરોસાથી પહોંચાડીએ છીએ.",
     ],
   } as Localized<string[]>,
   storyImage: "/images/brand/logo.jpg",

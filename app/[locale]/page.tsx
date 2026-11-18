@@ -27,7 +27,8 @@ import {
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
-  return buildMetadata({ locale });
+  const th = await getTranslations({ locale, namespace: "home" });
+  return buildMetadata({ locale, title: th("metaTitle") });
 }
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
