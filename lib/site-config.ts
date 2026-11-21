@@ -205,7 +205,7 @@ export const siteConfig = {
     gu: "સોમ–રવિ, સવારે 9:00 – રાત્રે 10:00",
   } as Localized<string>,
   certifications: {
-    fssai: "10012345678901", // TODO: confirm, this looks like a sample number
+    fssai: "20726019002572", // as printed on the pack labels
     gst: "24AGBFS0164J1Z3",
     others: [] as string[],
   },
